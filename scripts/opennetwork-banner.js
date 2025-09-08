@@ -161,7 +161,7 @@
         style.id = 'opennetwork-banner-styles';
         style.textContent = `
             .opennetwork-banner {
-                position: fixed;
+                position:relative;
                 ${CONFIG.position}: 0;
                 left: 0;
                 right: 0;
@@ -300,10 +300,7 @@
                 }
             }
             
-            .opennetwork-banner.on-animate-in {
-                animation: slideIn 0.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
-            }
-            
+           
             /* Responsive design */
             @media (max-width: 768px) {
                 .opennetwork-banner {

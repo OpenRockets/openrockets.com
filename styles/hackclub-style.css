@@ -441,7 +441,11 @@ body::before {
     0%, 100% { transform: translateY(0px); }
     50% { transform: translateY(-20px); }
 }
-
+  @media (max-width: 1116px) {
+        .hero-illustrations {
+            display: none !important;
+        }
+    }
 
 
 /* Stats Section */
@@ -449,6 +453,8 @@ body::before {
     padding: var(--space-6) var(--space-4);
     background: linear-gradient(135deg, rgba(124, 58, 237, 0.1) 0%, rgba(14, 165, 233, 0.1) 50%, rgba(6, 182, 212, 0.1) 100%);
     margin: var(--space-6) 0;
+
+  
     border-top: 2px solid rgba(124, 58, 237, 0.3);
     border-bottom: 2px solid rgba(14, 165, 233, 0.3);
 }
