@@ -14,32 +14,31 @@ class ParrotAssistant {
         // Message categories with content
         this.messages = {
             tips: [
-                "💡 Pro tip: Check out our GitHub repositories for amazing open-source projects!",
-                "🔥 Hot tip: Join our Discord for real-time collaboration with developers worldwide!",
-                "⚡ Quick tip: Star our projects on GitHub to stay updated with new features!",
-                "🎯 Dev tip: Start with small issues and work your way up to major contributions!",
-                "🚀 Speed tip: Use our web-dev-error-solutions repo to debug faster!"
+            "Need free laptop stickers? Solve issues in our GitHub and we will contact you.",
+            "It's really lonely here to stay all the day..",
+            "Building an Innovation? Shall we give you 20 dollars FREE?",
+            "Not from India, Sri Lanka, Maldives, Malaysia? Let's start a new club in your country!",
+            "Hmm.."
             ],
             announcements: [
-                "📢 New hackathon starting next month! Win amazing prizes and recognition!",
-                "🎉 OpenSocial platform now has 5+ contributors! Join the Sri Lankan social media revolution!",
-                "📅 Weekly coding meetups every Saturday - virtual and in-person available!",
-                "🏆 Top 3 contributors get free domain names and full project ownership!",
-                "🌟 We've reached 2.9k+ GitHub stars! Thank you amazing community!"
+            "DAYDREAM SRI LANKA is happening 27th in Colombo!! Join it!",
+            "Weekly coding meetups every Saturday - virtual and in-person available!",
+            "Top 3 contributors get free domain names and full project ownership!",
+            "We've reached 2.9k+ GitHub stars! Thank you amazing community!"
             ],
             memes: [
-                "🦜 *squawk* Why do programmers prefer dark mode? Because light attracts bugs! 😂",
-                "🎭 Me: I'll just fix this one small bug... *3 hours later* ...why is everything broken? 🤯",
-                "🍕 99 little bugs in the code, 99 little bugs... Take one down, patch it around... 127 little bugs in the code! 😅",
-                "🦜 *chirp chirp* Git commit -m 'fixed everything' ...famous last words! 🤡",
-                "☕ Coffee: Because debugging at 3 AM is a lifestyle choice, not a requirement! ☕😴"
+            "Why do programmers prefer dark mode? Because light attracts bugs!",
+            "Me: I'll just fix this one small bug... 3 hours later... why is everything broken?",
+            "99 little bugs in the code, 99 little bugs... Take one down, patch it around... 127 little bugs in the code!",
+            "Git commit -m 'fixed everything' ...famous last words!",
+            "Coffee: Because debugging at 3 AM is a lifestyle choice, not a requirement!"
             ],
             ideas: [
-                "💭 Idea: Create a mobile app version of your favorite OpenRockets project!",
-                "🌈 Brainstorm: What if we added AR features to CityofGits? Build in 3D space!",
-                "🔮 Vision: AI-powered code review bot for our repositories!",
-                "🎨 Concept: Design system library for consistent OpenRockets branding!",
-                "🌍 Dream: Global coding bootcamp program powered by our community!"
+            "Idea: Create a mobile app version of your favorite OpenRockets project!",
+            "Brainstorm: What if we added AR features to CityofGits? Build in 3D space!",
+            "Vision: AI-powered code review bot for our repositories!",
+            "Concept: Design system library for consistent OpenRockets branding!",
+            "Dream: Global coding bootcamp program powered by our community!"
             ]
         };
         
@@ -116,9 +115,9 @@ class ParrotAssistant {
             category = "announcements";
         } else if (element.classList.contains('feature-card')) {
             const tips = [
-                "💡 This feature is perfect for beginners! Don't be afraid to dive in!",
-                "🌟 Hover over me more often for secret tips and tricks!",
-                "🎯 Each feature connects to real projects you can contribute to!"
+                "This feature is perfect for beginners! Don't be afraid to dive in!",
+                "Hover over me more often for secret tips and tricks!",
+                "Each feature connects to real projects you can contribute to!"
             ];
             message = tips[Math.floor(Math.random() * tips.length)];
             category = "tips";
