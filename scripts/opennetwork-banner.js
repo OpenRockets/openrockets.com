@@ -9,7 +9,7 @@
     
     // Configuration
     const CONFIG = {
-        flagLogoUrl: 'https://openrockets.me/assets/press/opennetwork.png',
+        flagLogoUrl: 'https://openrockets.com/assets/press/opennetwork.png',
         affiliateUrl: 'https://opennetworked.org/en/privacy/affiliates',
         statusApiUrl: 'https://status.opennetworked.org/api/status', // Placeholder API
         animationDuration: 15000, // 15 seconds for marquee

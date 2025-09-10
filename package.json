@@ -33,10 +33,10 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/NekshaDeSilva/openrockets.me.git"
+    "url": "git+https://github.com/NekshaDeSilva/openrockets.com.git"
   },
   "bugs": {
-    "url": "https://github.com/NekshaDeSilva/openrockets.me/issues"
+    "url": "https://github.com/NekshaDeSilva/openrockets.com/issues"
   },
-  "homepage": "https://github.com/NekshaDeSilva/openrockets.me#readme"
+  "homepage": "https://github.com/NekshaDeSilva/openrockets.com#readme"
 }

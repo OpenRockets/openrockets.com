@@ -73,7 +73,7 @@ A modern, full-stack Learning Management System built with Node.js, Express, and
 ## 📁 Project Structure
 
 ```
-openrockets.me/
+openrockets.com/
 ├── server.js                 # Main backend server
 ├── package.json              # Dependencies and scripts
 ├── .env                      # Environment variables
@@ -113,7 +113,7 @@ openrockets.me/
 ### 1. Clone and Install
 ```bash
 git clone <repository-url>
-cd openrockets.me
+cd openrockets.com
 npm install
 ```
 
@@ -299,6 +299,6 @@ For issues and questions:
 
 **OpenRockets LMS** - Empowering the next generation of programmers through collaborative learning! 🚀
 
-#### OpenRockets.me is the present official domain of the OpenRockets Open-Source Software Foundation, though this may be subject to change in the future.
+#### OpenRockets.com is the present official domain of the OpenRockets Open-Source Software Foundation, though this may be subject to change in the future.
 =======
-<a href="https://openrockets.me/v/2025"><img src="https://openrockets.me/v/gitstarts2025v.png"></a>
+<a href="https://openrockets.com/v/2025"><img src="https://openrockets.com/v/gitstarts2025v.png"></a>

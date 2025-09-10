@@ -18,7 +18,7 @@ An advanced JavaScript banner that automatically displays registration informati
 Simply include the script in any website:
 
 ```html
-<script src="https://openrockets.me/scripts/opennetwork-banner.min.js"></script>
+<script src="https://openrockets.com/scripts/opennetwork-banner.min.js"></script>
 ```
 
 The banner will automatically:
