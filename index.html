@@ -2,25 +2,81 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OpenRockets - Build the Future Together</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>OpenRockets - Build the Future Together | Open Source Community</title>
     <meta name="description" content="OpenRockets OSS - Advancing software, education, and data innovation through the power of open-source. Level up, Challenge, Grow, Contribute.">
     <meta name="keywords" content="programming community, open source, coding, hackathons, builders, developers, students">
     <meta name="author" content="OpenRockets">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://openrockets.com/">
+    <meta property="og:title" content="OpenRockets - Build the Future Together">
+    <meta property="og:description" content="Join 31+ followers on GitHub. Contribute to innovative open-source projects. Level up, Challenge, Grow, Contribute with OpenRockets.">
+    <meta property="og:image" content="https://openrockets.com/v/openrockets.png">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://openrockets.com/">
+    <meta property="twitter:title" content="OpenRockets - Build the Future Together">
+    <meta property="twitter:description" content="Join 31+ followers on GitHub. Contribute to innovative open-source projects. Level up, Challenge, Grow, Contribute with OpenRockets.">
+    <meta property="twitter:image" content="https://openrockets.com/v/openrockets.png">
+    <meta property="twitter:site" content="@OpenRockets">
+    
+    <!-- PWA -->
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#EC3750">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="OpenRockets">
+    <link rel="apple-touch-icon" href="/v/openrockets.png">
+    
+    <!-- Favicon -->
     <link rel="icon" type="image/png" href="i/assets/static/openthread_logo_bash-trans-removebg-preview (1).png">
-    <script src="https://openrockets.com/scripts/opennetwork-banner.min.js"></script>
-    <!-- Google Sans Font -->
+    
+    <!-- Preconnect for performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="dns-prefetch" href="https://platform.twitter.com">
+    
+    <script src="https://openrockets.com/scripts/opennetwork-banner.min.js"></script>
+    <!-- Fonts with display swap for performance -->
     <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&display=swap" rel="stylesheet">
     
     <!-- Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous">
     
     <!-- Styles -->
     <link rel="stylesheet" href="styles/hackclub-style.css">
+    <link rel="stylesheet" href="styles/super-enhancements.css">
+    
+    <!-- Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "OpenRockets Foundation",
+      "url": "https://openrockets.com",
+      "logo": "https://openrockets.com/v/openrockets.png",
+      "description": "OpenRockets OSS - Advancing software, education, and data innovation through the power of open-source.",
+      "sameAs": [
+        "https://github.com/OpenRockets",
+        "https://twitter.com/OpenRockets",
+        "https://bit.ly/openrockets-discord"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "official@openrockets.com",
+        "contactType": "General Inquiries"
+      }
+    }
+    </script>
 </head>
 <body>
+    <!-- Skip to main content for accessibility -->
+    <a href="#home" class="skip-to-main">Skip to main content</a>
+    
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
@@ -75,8 +131,8 @@
         
         <!-- Student illustrations -->
         <div class="hero-illustrations">
-            <img src="i/sketches/pngtree-illustration-of-a-girl-wearing-a-hat-coloring-pages-vector-png-image_6781618.png" alt="Student builder" class="hero-img girl-coding">
-            <img src="i/sketches/454-4543412_for-practitioners-supporting-young-people-moving-to-school.png" alt="Young developers" class="hero-img students-group">
+            <img src="i/sketches/pngtree-illustration-of-a-girl-wearing-a-hat-coloring-pages-vector-png-image_6781618.png" alt="Student builder" class="hero-img girl-coding" loading="lazy">
+            <img src="i/sketches/454-4543412_for-practitioners-supporting-young-people-moving-to-school.png" alt="Young developers" class="hero-img students-group" loading="lazy">
         </div>
     </section>
 
@@ -911,6 +967,7 @@
     <!-- Scripts -->
     <script src="scripts/navigation.js"></script>
     <script src="scripts/hackclub-interactions.js"></script>
+    <script src="scripts/enhancements.js"></script>
     
     <!-- Parrot Assistant -->
     <div id="parrot-assistant" class="parrot-assistant">
