@@ -24,8 +24,8 @@
     --gradient-primary: linear-gradient(135deg, var(--accent-primary), #7b68ee);
     
     /* Fonts */
-    --font-primary: 'Inter', system-ui, sans-serif;
-    --font-mono: 'Space Mono', monospace;
+    --font-primary: 'Google Sans', system-ui, sans-serif;
+    --font-mono: 'Google Sans', monospace;
     
     /* Spacing */
     --sidebar-width: 280px;

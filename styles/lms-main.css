@@ -32,8 +32,8 @@
     --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.5);
     
     /* Fonts */
-    --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-    --font-mono: 'Space Mono', 'Fira Code', monospace;
+    --font-primary: 'Google Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-mono: 'Google Sans', 'Fira Code', monospace;
 }
 
 /* ===== RESET & BASE STYLES ===== */
