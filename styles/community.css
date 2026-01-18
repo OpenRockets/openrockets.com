@@ -6,6 +6,9 @@
     --gradient-sunset: #1A73E8;
     --gradient-cosmic: #1A73E8;
     --gradient-neon: #1A73E8;
+    --super-one-gold: #FFD700;
+    --super-one-orange: #FFA500;
+    --super-one-dark-orange: #FF8C00;
     --font-display: 'Google Sans', sans-serif;
     --font-mono: 'Google Sans', sans-serif;
 }
@@ -476,14 +479,11 @@
 
 /* Super One - Special styling for #1 rank */
 .trending-rank.super-one {
-    background: linear-gradient(135deg, #FFD700, #FFA500, #FF8C00);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    background: linear-gradient(135deg, var(--super-one-gold), var(--super-one-orange), var(--super-one-dark-orange));
     font-size: 1.2rem;
     font-weight: 800;
     position: relative;
-    animation: superOneGlow 2s ease-in-out infinite;
+    animation: superOneGlow 2s ease-in-out 3;
 }
 
 @keyframes superOneGlow {
@@ -500,7 +500,7 @@
 }
 
 .trending-item:hover .trending-rank.super-one {
-    -webkit-text-fill-color: #FFD700;
+    -webkit-text-fill-color: var(--super-one-gold);
 }
 
 .trending-sparkline {
