@@ -17,6 +17,11 @@
     --ada-blue: var(--primary-blue);
     --ada-light-gray: var(--light-gray);
     --ada-dark-gray: var(--dark-gray);
+    --ada-purple: #8B5CF6;
+    --ada-yellow: #FFD23F;
+    --ada-green: #10B981;
+    --ada-orange: #FF8C42;
+    --ada-pink: #EC4899;
     
     /* Legacy color compatibility */
     --hc-blue: var(--primary-blue);
@@ -64,6 +69,41 @@
     /* Animations */
     --transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-slow: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-base: all 0.3s ease;
+    
+    /* Additional missing variables */
+    --white: #FFFFFF;
+    --hc-red: #EC3750;
+    --hc-orange: #FF8C37;
+    --ada-dark: var(--dark-gray);
+    --primary-purple: var(--ada-purple);
+    --primary-color: var(--primary-black);
+    --primary-light: var(--light-gray);
+    --accent-color: var(--primary-blue);
+    --gray-300: #DEE2E6;
+    --gray-400: var(--medium-gray);
+    --bg-primary: var(--dark-gray);
+    --bg-secondary: var(--primary-black);
+    --bg-tertiary: #1a1a1a;
+    
+    /* Additional spacing */
+    --space-xs: 0.25rem;
+    --space-sm: 0.5rem;
+    --space-md: 1rem;
+    --space-lg: 1.5rem;
+    --space-xl: 2rem;
+    --space-2xl: 3rem;
+    --space-3xl: 4rem;
+    
+    /* Text sizes */
+    --text-sm: 0.875rem;
+    --text-base: 1rem;
+    --text-lg: 1.125rem;
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, var(--ada-yellow), var(--ada-orange));
+    --gradient-secondary: linear-gradient(135deg, var(--ada-blue), var(--ada-purple));
+    --gradient-sunset: linear-gradient(135deg, var(--ada-orange), var(--ada-pink));
 }
 
 /* Reset */
@@ -296,8 +336,8 @@ body {
     font-weight: 900;
     line-height: 0.95;
     margin-bottom: var(--space-4);
-    background: linear-gradient(45deg, white, #ffffff);
-    filter: drop-shadow(0 0 50px black);
+    background: linear-gradient(45deg, var(--primary-black), var(--dark-gray));
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
