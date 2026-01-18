@@ -111,7 +111,7 @@ class ParrotAssistant {
         
         // Context-aware messages based on element
         if (element.classList.contains('btn-primary')) {
-            message = "🚀 Ready to start your coding journey? Click that button and let's build something amazing!";
+            message = "Ready to start your coding journey? Click that button and let's build something amazing!";
             category = "announcements";
         } else if (element.classList.contains('feature-card')) {
             const tips = [
@@ -202,7 +202,7 @@ document.addEventListener('keydown', (e) => {
         const parrot = document.getElementById('parrot-assistant');
         if (parrot) {
             const assistant = new ParrotAssistant();
-            assistant.displayMessage("🎉 *SQUAWK SQUAWK* You found the secret parrot party! 🦜🎊", "memes");
+            assistant.displayMessage("SQUAWK SQUAWK You found the secret parrot party!", "memes");
         }
     }
 });
