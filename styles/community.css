@@ -1612,13 +1612,6 @@
     min-width: 20px;
 }
 
-/* Super One - Special styling for #1 rank (alternative styling) */
-.trending-rank.super-one {
-    color: #FFD700;
-    font-size: 1.1rem;
-    font-weight: 800;
-}
-
 .trending-info {
     flex: 1;
 }
