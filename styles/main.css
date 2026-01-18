@@ -6,39 +6,39 @@
 }
 
 :root {
-    /* Color Palette */
-    --primary-color: #22ff00;
-    --primary-dark: #004499;
-    --primary-light: #000000;
-    --secondary-color: #ff6b35;
-    --secondary-dark: #e55a2b;
-    --accent-color: #00d4aa;
-    --accent-dark: #00b894;
+    /* Professional Color Palette */
+    --primary-color: #1A73E8;
+    --primary-dark: #1557B0;
+    --primary-light: #4285F4;
+    --secondary-color: #000000;
+    --secondary-dark: #000000;
+    --accent-color: #DC3545;
+    --accent-dark: #C82333;
     
     /* Neutral Colors */
     --white: #ffffff;
-    --gray-50: #f8fafc;
-    --gray-100: #f1f5f9;
-    --gray-200: #e2e8f0;
-    --gray-300: #cbd5e1;
-    --gray-400: #94a3b8;
-    --gray-500: #64748b;
-    --gray-600: #475569;
-    --gray-700: #334155;
-    --gray-800: #1e293b;
-    --gray-900: #0f172a;
+    --gray-50: #f8f9fa;
+    --gray-100: #e9ecef;
+    --gray-200: #dee2e6;
+    --gray-300: #ced4da;
+    --gray-400: #adb5bd;
+    --gray-500: #6c757d;
+    --gray-600: #495057;
+    --gray-700: #343a40;
+    --gray-800: #212529;
+    --gray-900: #000000;
     --black: #000000;
     
     /* Background Colors */
-    --bg-primary: #0a0a0f;
-    --bg-secondary: #1a1a2e;
-    --bg-tertiary: #16213e;
-    --bg-glass: rgba(255, 255, 255, 0.05);
-    --bg-glass-hover: rgba(255, 255, 255, 0.1);
+    --bg-primary: #ffffff;
+    --bg-secondary: #f8f9fa;
+    --bg-tertiary: #e9ecef;
+    --bg-glass: rgba(255, 255, 255, 0.95);
+    --bg-glass-hover: rgba(255, 255, 255, 1);
     
     /* Typography */
-    --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-    --font-mono: 'Space Mono', 'Fira Code', 'Monaco', 'Consolas', monospace;
+    --font-primary: 'Google Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    --font-mono: 'Google Sans', 'Roboto Mono', monospace;
     
     /* Font Weights */
     --font-light: 300;

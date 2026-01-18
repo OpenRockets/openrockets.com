@@ -1,50 +1,44 @@
-/* OpenRockets - Hack Club Inspired Design System */
-@import url('https://fonts.googleapis.com/css2?family=Phantom+Sans:wght@400;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700;800;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Asimovian&family=Michroma&family=Zalando+Sans+Expanded:ital,wght@0,200..900;1,200..900&display=swap'); 
+/* OpenRockets - Professional Design System */
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&display=swap');
+
 :root {
-    /* Ada College Inspired Color Palette */
-    --ada-yellow: #FFD23F;
-    --ada-green: #7CB342;
-    --ada-blue: #42A5F5;
-    --ada-purple: #BA68C8;
-    --ada-orange: #FF7043;
-    --ada-pink: #EC407A;
-    --ada-light-gray: #F8F9FA;
-    --ada-dark-gray: #263238;
+    /* Professional Color Palette */
+    --primary-white: #FFFFFF;
+    --primary-black: #000000;
+    --primary-blue: #1A73E8;
+    --secondary-blue: #4285F4;
+    --accent-red: #DC3545;
+    --light-gray: #F8F9FA;
+    --medium-gray: #6C757D;
+    --dark-gray: #343A40;
+    --border-gray: #DEE2E6;
     
-    /* Modern Gradients - Ada Inspired */
-    --gradient-primary: linear-gradient(135deg, var(--ada-yellow) 0%, var(--ada-orange) 100%);
-    --gradient-secondary: linear-gradient(135deg, var(--ada-green) 0%, var(--ada-blue) 100%);
-    --gradient-accent: linear-gradient(135deg, var(--ada-purple) 0%, var(--ada-pink) 100%);
-    --gradient-hero: linear-gradient(135deg, var(--ada-blue) 0%, var(--ada-purple) 50%, var(--ada-pink) 100%);
-    --gradient-geometric: linear-gradient(45deg, var(--ada-yellow) 25%, var(--ada-green) 25%, var(--ada-green) 50%, var(--ada-blue) 50%, var(--ada-blue) 75%, var(--ada-purple) 75%);
+    /* Simplified color references */
+    --ada-blue: var(--primary-blue);
+    --ada-light-gray: var(--light-gray);
+    --ada-dark-gray: var(--dark-gray);
     
-    /* Legacy Hack Club Colors (maintained for compatibility) */
-    --hc-red: var(--ada-orange);
-    --hc-orange: var(--ada-yellow);
-    --hc-yellow: var(--ada-yellow);
-    --hc-green: var(--ada-green);
-    --hc-blue: var(--ada-blue);
-    --hc-purple: var(--ada-purple);
-    --hc-slate: #34495E;
-    --hc-muted: #7F8C8D;
-    --hc-smoke: #ECF0F1;
-    --hc-snow: #FFFFFF;
-    --hc-dark: #2C3E50;
-    --hc-black: #1A252F;
+    /* Legacy color compatibility */
+    --hc-blue: var(--primary-blue);
+    --hc-slate: var(--dark-gray);
+    --hc-muted: var(--medium-gray);
+    --hc-smoke: var(--light-gray);
+    --hc-snow: var(--primary-white);
+    --hc-dark: var(--dark-gray);
+    --hc-black: var(--primary-black);
     
-    /* Custom OpenRockets Extensions - Ada Style */
-    --or-primary: var(--ada-blue);
-    --or-secondary: var(--ada-green);
-    --or-accent: var(--ada-yellow);
-    --or-dark: var(--ada-dark-gray);
-    --or-darker: #1A252F;
-    --or-light: var(--ada-light-gray);
+    /* OpenRockets color system */
+    --or-primary: var(--primary-blue);
+    --or-secondary: var(--secondary-blue);
+    --or-accent: var(--accent-red);
+    --or-dark: var(--dark-gray);
+    --or-darker: var(--primary-black);
+    --or-light: var(--light-gray);
     
     /* Typography */
-    --font-primary: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
-    --font-display: "Asimovian", sans-serif;
-    --font-modern:  "Asimovian", sans-serif;
+    --font-primary: 'Google Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-display: 'Google Sans', sans-serif;
+    --font-modern: 'Google Sans', sans-serif;
     
     /* Spacing */
     --space-1: 0.25rem;
@@ -85,30 +79,13 @@ html {
 
 body {
     font-family: var(--font-primary);
-    background: linear-gradient(135deg, var(--ada-light-gray) 0%, #FFFFFF  25%, var(--ada-light-gray) 50%, #F0F3F7 75%, var(--ada-light-gray) 100%);
-    background-attachment: fixed;
-    color: var(--ada-dark-gray);
+    background: var(--primary-white);
+    color: var(--primary-black);
     line-height: 1.6;
     overflow-x: hidden;
     font-weight: 400;
     font-size: 18px;
     position: relative;
-}
-
-/* Ambient background effects - Ada Style Geometric Patterns */
-body::before {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: 
-        radial-gradient(circle at 20% 80%, rgba(175, 122, 197, 0.08) 0%, transparent 50%),
-        radial-gradient(circle at 80% 20%, rgba(143, 209, 79, 0.08) 0%, transparent 50%),
-        radial-gradient(circle at 50% 50%, rgba(255, 210, 63, 0.05) 0%, transparent 50%);
-    pointer-events: none;
-    z-index: -1;
 }
 
 /* Canvas Background */
@@ -122,20 +99,18 @@ body::before {
     opacity: 0.1;
 }
 
-/* Navigation - Ada Style */
+/* Navigation - Professional Style */
 .navbar {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     z-index: 1000;
-    background: rgba(0, 0, 0, 0.95);
-    -webkit-backdrop-filter: blur(20px);
-    backdrop-filter: blur(20px);
-    border-bottom: 3px solid var(--ada-yellow);
+    background: var(--primary-white);
+    border-bottom: 1px solid var(--border-gray);
     padding: var(--space-3) 0;
     transition: var(--transition);
-    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .nav-container {
@@ -175,12 +150,8 @@ body::before {
 .brand-text {
     font-family: var(--font-display);
     font-size: 1.5rem;
-    font-weight: 800;
-
-    background: var(--ada-light-gray);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+    font-weight: 700;
+    color: var(--primary-black);
     line-height: 1;
 }
 
@@ -2839,5 +2810,158 @@ body.nav-open {
 .footer-bottom p {
     color: var(--ada-light-gray) !important;
     opacity: 0.7;
+}
+
+
+/* Magazine Announcement Section */
+.magazine-announcement {
+    padding: var(--space-6) var(--space-4);
+    background: var(--light-gray);
+    border-bottom: 1px solid var(--border-gray);
+}
+
+.magazine-announcement .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.announcement-content {
+    background: var(--primary-white);
+    padding: var(--space-5);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+    text-align: center;
+}
+
+.announcement-header h2 {
+    margin-bottom: var(--space-4);
+}
+
+.announcement-body p {
+    max-width: 800px;
+    margin: 0 auto var(--space-4);
+}
+
+/* Impact Report Section */
+.impact-report {
+    padding: var(--space-6) var(--space-4);
+    background: var(--primary-white);
+}
+
+.impact-report .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.report-header {
+    text-align: center;
+    margin-bottom: var(--space-5);
+}
+
+.report-meta {
+    color: var(--medium-gray);
+    font-size: 0.9rem;
+    margin-top: var(--space-2);
+}
+
+.report-content {
+    background: var(--light-gray);
+    padding: var(--space-5);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border-gray);
+}
+
+.report-intro {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: var(--space-5);
+    color: var(--dark-gray);
+}
+
+.milestones-section h3 {
+    font-size: 1.8rem;
+    margin-bottom: var(--space-4);
+    color: var(--primary-black);
+    font-weight: 700;
+}
+
+.milestones-list {
+    list-style: none;
+    padding: 0;
+}
+
+.milestones-list li {
+    background: var(--primary-white);
+    padding: var(--space-4);
+    margin-bottom: var(--space-3);
+    border-radius: var(--radius);
+    border-left: 4px solid var(--primary-blue);
+    box-shadow: var(--shadow-sm);
+}
+
+.milestones-list li strong {
+    color: var(--primary-blue);
+    font-weight: 700;
+}
+
+.report-cta {
+    margin-top: var(--space-5);
+    display: flex;
+    gap: var(--space-3);
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Professional Button Styles */
+.btn-primary {
+    background: var(--primary-blue);
+    color: var(--primary-white);
+    border: none;
+}
+
+.btn-primary:hover {
+    background: var(--secondary-blue);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(26, 115, 232, 0.3);
+}
+
+.btn-secondary {
+    background: var(--primary-white);
+    color: var(--primary-blue);
+    border: 2px solid var(--primary-blue);
+}
+
+.btn-secondary:hover {
+    background: var(--primary-blue);
+    color: var(--primary-white);
+    transform: translateY(-2px);
+}
+
+/* Remove all gradient backgrounds for professional look */
+body::before,
+.hero::before,
+.hero::after {
+    display: none;
+}
+
+/* Professional footer */
+.footer {
+    background: var(--dark-gray) !important;
+    color: var(--primary-white) !important;
+    border-top: 1px solid var(--border-gray);
+}
+
+.footer-section h4,
+.footer-section h5 {
+    color: var(--primary-white) !important;
+}
+
+.footer-section a,
+.footer-section span {
+    color: var(--light-gray) !important;
+}
+
+.footer-section a:hover {
+    color: var(--primary-blue) !important;
 }
 
