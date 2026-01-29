@@ -1,17 +1,12 @@
-const CACHE_NAME = 'openrockets-v1';
+const CACHE_NAME = 'openrockets-foundation-v2';
 const urlsToCache = [
   '/',
   '/index.html',
   '/join.html',
-  '/calendar.html',
-  '/community.html',
-  '/about.html',
-  '/styles/hackclub-style.css',
-  '/styles/main.css',
-  '/styles/responsive.css',
+  '/styles/foundation.css',
   '/scripts/navigation.js',
   '/scripts/hackclub-interactions.js',
-  '/scripts/parrot-assistant.js',
+  '/scripts/enhancements.js',
   '/v/openrockets.png',
   '/i/assets/static/openthread_logo_bash-trans-removebg-preview (1).png'
 ];
