@@ -1,5 +1,7 @@
 # OpenRockets LMS - Complete Learning Management System
 
+> **Repository Restoration Notice (February 15, 2026)**: This repository has been restored to its last organic commit from October 1, 2025 (commit `55b35d0`), removing all AI-generated commits and pull requests that were merged after that date. The repository now reflects the authentic version of the website created by the OpenRockets community before AI bot interference.
+
 A modern, full-stack Learning Management System built with Node.js, Express, and AstraDB. Features include user authentication, course management, community interactions, real-time messaging, and calendar-based event scheduling.
 
 ![preview](https://github.com/user-attachments/assets/c6b74ca6-0056-41fe-b895-41ccc0d123cc)

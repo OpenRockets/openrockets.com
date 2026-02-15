@@ -1,5 +1,0 @@
-Contact: mailto:official@openrockets.com
-Preferred-Languages: en
-Canonical: https://openrockets.com/.well-known/security.txt
-Policy: https://github.com/OpenRockets/openrockets.com/security/policy
-Acknowledgments: https://github.com/OpenRockets/openrockets.com/graphs/contributors

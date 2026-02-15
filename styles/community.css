@@ -1,19 +1,19 @@
 /* ===== COMMUNITY SPECIFIC STYLES ===== */
 
-/* Import Professional Color Variables */
+/* Import Hack Club gradient variables */
 :root {
-    --gradient-electric: #1A73E8;
-    --gradient-sunset: #1A73E8;
-    --gradient-cosmic: #1A73E8;
-    --gradient-neon: #1A73E8;
-    --font-display: 'Google Sans', sans-serif;
-    --font-mono: 'Google Sans', sans-serif;
+    --gradient-electric: linear-gradient(135deg, #7C3AED 0%, #06B6D4 100%);
+    --gradient-sunset: linear-gradient(135deg, #F59E0B 0%, #EF4444 100%);
+    --gradient-cosmic: linear-gradient(135deg, #8B5CF6 0%, #EC4899 100%);
+    --gradient-neon: linear-gradient(135deg, #10B981 0%, #06B6D4 100%);
+    --font-display: 'Kanit', sans-serif;
+    --font-mono: 'Space Mono', monospace;
 }
 
 /* Community Layout */
 .community-container {
     padding: 24px;
-    font-family: 'Google Sans', -apple-system, sans-serif;
+    font-family: 'Space Grotesk', -apple-system, sans-serif;
 }
 
 .community-layout {
@@ -142,7 +142,7 @@
     text-align: left;
     cursor: pointer;
     font-size: 1rem;
-    font-family: 'Google Sans', sans-serif;
+    font-family: 'Space Grotesk', sans-serif;
     transition: all 0.3s ease;
 }
 
