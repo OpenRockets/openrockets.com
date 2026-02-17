@@ -3,860 +3,261 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OpenRockets - Build the Future Together</title>
-    <meta name="description" content="OpenRockets OSS - Advancing software, education, and data innovation through the power of open-source. Level up, Challenge, Grow, Contribute.">
-    <meta name="keywords" content="programming community, open source, coding, hackathons, builders, developers, students">
-    <meta name="author" content="OpenRockets">
+    <title>OpenRockets Foundation - Advancing Open Source Software, Education, and Innovation</title>
+    <meta name="description" content="OpenRockets Foundation is a non-profit organization advancing software, education, and data innovation through open-source collaboration. Supporting developers, students, and organizations worldwide.">
+    <meta name="keywords" content="open source, software foundation, education, innovation, developers, programming, non-profit">
+    <meta name="author" content="OpenRockets Foundation">
     <link rel="icon" type="image/png" href="i/assets/static/openthread_logo_bash-trans-removebg-preview (1).png">
-    <script src="https://openrockets.com/scripts/opennetwork-banner.min.js"></script>
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Michroma&display=swap" rel="stylesheet">
     
-    <style>
-        .michroma-regular {
-            font-family: "Michroma", sans-serif;
-            font-weight: 400;
-            font-style: normal;
-        }
-    </style>
+    <!-- Professional Styles -->
+    <link rel="stylesheet" href="styles/professional.css">
     
-    <!-- Icons -->
+    <!-- Font Awesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    
-    <!-- Styles -->
-    <link rel="stylesheet" href="styles/hackclub-style.css">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="#" class="nav-brand">
-                <img src="v/openrockets.png" alt="OpenRockets">
-                <span class="brand-text"> / platform</span>
+    <!-- Professional Navigation -->
+    <nav class="professional-nav">
+        <div class="nav-content">
+            <a href="/" class="nav-logo">
+                <img src="v/openrockets.png" alt="OpenRockets Foundation">
+                <span>OpenRockets Foundation</span>
             </a>
-            
-            
-            <ul class="nav-menu">
-                <li><a href="#home" class="nav-link active">Home</a></li>
-                <li><a href="/about.html" class="nav-link" >About</a></li>
-                
-                <li><a href="#hackclub-daydream" class="nav-link hackclub-highlight">Upcoming</a></li>
-                <li><a href="#news" class="nav-link">News</a></li>
-                <li><a href="#events" class="nav-link">Events</a></li>
-                <li><a href="join.html" class="nav-link">Join</a></li>
+            <ul class="nav-links">
+                <li><a href="#about" class="active">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#magazine">Magazine</a></li>
+                <li><a href="#community">Community</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="join.html" class="btn-professional" style="padding: 0.5rem 1rem;">Join Us</a></li>
             </ul>
-            
-            <button class="nav-toggle" title="Toggle Navigation Menu" aria-label="Toggle Navigation Menu">
-                <i class="fas fa-bars"></i>
-            </button>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <div class="hero-badge clickable" onclick="window.open('https://github.com/OpenRockets/opensocial')">
-                <i class="fas fa-rocket"></i>
-                <span>Solve issues in our GitHub repositories and earn rewards.</span>
+    <section class="professional-hero">
+        <div class="container">
+            <h1>Advancing Open Source Innovation</h1>
+            <p>OpenRockets Foundation supports the open source community through collaborative development, education initiatives, and innovative projects that empower developers worldwide.</p>
+            <div style="margin-top: 2rem; display: flex; gap: 1rem; justify-content: center;">
+                <a href="#projects" class="btn-professional">Explore Projects</a>
+                <a href="join.html" class="btn-professional btn-professional-secondary">Join Community</a>
             </div>
-            
-            <h1 class="hero-title">
-                We build the future
-                <span class="text-gradient">together</span>
-            </h1>
-            
-
-            <div class="hero-cta">
-                <a href="join.html" class="btn btn-primary btn-large">
-                    <i class="fas fa-rocket"></i>
-                    Join the team
-                </a>
-             
-                <a href="#projects" class="btn btn-secondary btn-large">
-                    <i class="fas fa-code"></i>
-                    See around
-                </a>
-            </div>
-        </div>
-        
-        <!-- Student illustrations -->
-        <div class="hero-illustrations">
-            <img src="i/sketches/pngtree-illustration-of-a-girl-wearing-a-hat-coloring-pages-vector-png-image_6781618.png" alt="Student builder" class="hero-img girl-coding">
-            <img src="i/sketches/454-4543412_for-practitioners-supporting-young-people-moving-to-school.png" alt="Young developers" class="hero-img students-group">
         </div>
     </section>
 
-    <!-- HackClub DayDream Sri Lanka Event Banner -->
-    <section id="hackclub-daydream" class="hackclub-event-banner">
-        <div class="event-container">
-            <div class="event-content">
-                <div class="event-header">
-                    <img src="assets/i/static-v3/hackclub.png" alt="HackClub DayDream Sri Lanka" class="hackclub-logo">
-                    <div class="event-title-group">
-                        <h2 class="event-title">HackClub DayDream Sri Lanka</h2>
-                        <span class="event-date">Coming September 27th</span>
-                    </div>
-                    <div class="event-badge">LIVE EVENT</div>
+    <!-- About Section -->
+    <section id="about" class="professional-section">
+        <div class="container">
+            <h2 class="section-title">About OpenRockets Foundation</h2>
+            <p class="section-subtitle">A 501(c)(3) registered non-profit organization dedicated to advancing open source software, education, and data innovation globally.</p>
+            
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <h3>31+</h3>
+                    <p>GitHub Followers</p>
                 </div>
+                <div class="stat-item">
+                    <h3>2.9K+</h3>
+                    <p>GitHub Stars</p>
+                </div>
+                <div class="stat-item">
+                    <h3>100+</h3>
+                    <p>Active Contributors</p>
+                </div>
+                <div class="stat-item">
+                    <h3>Global</h3>
+                    <p>Reach & Impact</p>
+                </div>
+            </div>
+
+            <div class="grid-3" style="margin-top: 3rem;">
+                <div class="professional-card">
+                    <h3>Mission</h3>
+                    <p>To support and promote the development of open source software through collaborative innovation, education, and community building.</p>
+                </div>
+                <div class="professional-card">
+                    <h3>Vision</h3>
+                    <p>Creating a global ecosystem where developers, students, and organizations can collaborate on innovative open source solutions.</p>
+                </div>
+                <div class="professional-card">
+                    <h3>Values</h3>
+                    <p>Transparency, collaboration, innovation, and inclusivity drive our commitment to the open source community.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Magazine Feature Section -->
+    <section id="magazine" class="professional-section alt">
+        <div class="container">
+            <div class="magazine-feature">
+                <h2 class="section-title">OpenRockets Magazine</h2>
+                <p class="section-subtitle">Stay informed with the latest insights, tutorials, and news from the open source community.</p>
                 
-                <div class="event-description">
-                    <p class="event-subtitle">
-                        🎮 Create amazing games in just 24 hours! Join developers across Colombo and various locations 
-                        throughout Sri Lanka for an epic game development hackathon inspired by HackClub's global maker community.
-                    </p>
-                    
-                    <div class="event-what-is">
-                        <h3>What is HackClub DayDream?</h3>
-                        <p>DayDream is a 24-hour game development jam where teenage developers and makers come together to create incredible games from scratch. Inspired by HackClub's philosophy of learning by building, this event encourages participants to explore game development, experiment with new tools, and collaborate with fellow builders.</p>
-                        
-                        <h4>What You'll Do:</h4>
-                        <ul class="activity-list">
-                            <li>🎯 Form teams with other developers (or work solo)</li>
-                            <li>🎨 Brainstorm and design your game concept</li>
-                            <li>⚡ Build your game using Unity, Unreal Engine, Scratch, JavaScript, or any tool you prefer</li>
-                            <li>🎵 Create graphics, sounds, and gameplay mechanics</li>
-                            <li>🏆 Present your creation to judges and fellow participants</li>
-                            <li>🎉 Win awesome prizes and gain recognition in the community</li>
-                        </ul>
-                        
-                        <h4>Perfect For:</h4>
-                        <ul class="skill-levels">
-                            <li>🔰 <strong>Beginners:</strong> New to coding? We'll provide tutorials and mentors!</li>
-                            <li>📈 <strong>Intermediate:</strong> Ready to try new frameworks and tools</li>
-                            <li>🚀 <strong>Advanced:</strong> Push the boundaries with complex game mechanics</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="event-details">
-                        <div class="detail-item">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span>Colombo & Multiple Locations, Sri Lanka</span>
-                        </div>
-                        <div class="detail-item">
-                            <i class="fas fa-clock"></i>
-                            <span>24-Hour Game Jam Challenge</span>
-                        </div>
-                        <div class="detail-item">
-                            <i class="fas fa-users"></i>
-                            <span>Open to All Skill Levels</span>
-                        </div>
-                        <div class="detail-item">
-                            <i class="fas fa-gamepad"></i>
-                            <span>Unity, Unreal, JavaScript & Any Game Engine</span>
-                        </div>
-                        <div class="detail-item">
-                            <i class="fas fa-trophy"></i>
-                            <span>Prizes, Recognition & Portfolio Building</span>
-                        </div>
-                        <div class="detail-item">
-                            <i class="fab fa-whatsapp"></i>
-                            <span>Live Community Support & Updates</span>
-                        </div>
-                    </div>
-                    
-                    <div class="event-cta">
-                        <a href="https://whatsapp.com/channel/0029VbBBU1p3mFY2WbU2xL0v" target="_blank" class="btn btn-primary btn-hackclub">
-                            <i class="fab fa-whatsapp"></i>
-                            Join WhatsApp Updates
-                        </a>
-                        <a href="#events" class="btn btn-secondary">
-                            <i class="fas fa-info-circle"></i>
-                            Learn More
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Stats Section -->
-    <section class="stats">
-        <div class="stats-grid">
-            <div class="stat-item">
-                <span class="stat-number">31+</span>
-                <span class="stat-label">GitHub Followers</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-number">18+</span>
-                <span class="stat-label">Open Repositories</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-number">2.9k+</span>
-                <span class="stat-label">GitHub Stars</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-number">24/7</span>
-                <span class="stat-label">Active Community</span>
-            </div>
-        </div>
-    </section>
-
-    <!-- Angular Divider -->
-    <div class="angular-divider"></div>
-
-    <!-- Split Section - Learner/Employer Style -->
-    <section class="split-section geometric-section">
-        <div class="split-left">
-            <div class="split-content">
-                <h2>I'M A BUILDER</h2>
-                <p>Qualifications which unlock an amazing future in the tech world through open-source contributions and collaborative development.</p>
-                <div class="hero-cta">
-                    <a href="join.html" class="btn">
-                        <i class="fas fa-rocket"></i>
-                        Join the Team
-                    </a>
-                    <a href="#projects" class="btn">
-                        <i class="fas fa-code"></i>
-                        See Projects
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="split-right">
-            <div class="split-content">
-                <h2>I'M AN EMPLOYER</h2>
-                <p>Support young people by hiring contributors, volunteering, or making partnerships with OpenRockets community.</p>
-                <div class="hero-cta">
-                    <a href="mailto:official@openrockets.com" class="btn">
-                        <i class="fas fa-handshake"></i>
-                        Partner with Us
-                    </a>
-                    <a href="https://github.com/OpenRockets" class="btn">
-                        <i class="fab fa-github"></i>
-                        View Contributors
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- School Marquee Section -->
-    <section class="school-marquee">
-        <div class="marquee-header">
-            <h3>With a network of contributors from</h3>
-            <p>Universities, High schools and Secondary schools from Sri Lanka, India and Maldives.</p>
-        </div>
-        <div class="marquee-container">
-            <div class="marquee-content">
-                <img src="assets/i/static-v3/Logo_of_Nalanda_College_Colombo.png" alt="Nalanda College Colombo" class="school-logo">
-                <img src="assets/i/static-v3/royal-college-black.png" alt="Royal College" class="school-logo">
-                <img src="assets/i/static-v3/St_John's_College_Jaffna_crest.png" alt="St John's College Jaffna" class="school-logo">
-                <img src="assets/i/static-v3/sliit-campus-logo-png_seeklogo-611785.png" alt="OpenRockets" class="school-logo">
-                <img src="assets/i/static-v3/logo_flag.png" alt="OpenRockets Flag" class="school-logo">
-                <img src="assets/i/static-v3/pngtree-dendabor-kindergarten-high-school-logo-vector-png-image_16230886.png" alt="OpenRockets Flag" class="school-logo">
-                <img src="assets/i/static-v3/University_of_Moratuwa_logo.png" alt="OpenRockets Flag" class="school-logo">
-                 <img src="assets/i/static-v3/logo.png" alt="OpenRockets" class="school-logo">
-                  <img src="assets/i/static-v3/logo-web-back.png" alt="OpenRockets" class="school-logo">
-                   <img src="assets/i/static-v3/logo1.png" alt="OpenRockets" class="school-logo">
-                    <img src="assets/i/static-v3/site-logo.svg" alt="OpenRockets" class="school-logo">
-                    <img src="assets/i/static-v3/Logo_of_Nalanda_College_Colombo.png" alt="Nalanda College Colombo" class="school-logo">
-                <img src="assets/i/static-v3/royal-college-black.png" alt="Royal College" class="school-logo">
-                <img src="assets/i/static-v3/St_John's_College_Jaffna_crest.png" alt="St John's College Jaffna" class="school-logo">
-                <img src="assets/i/static-v3/sliit-campus-logo-png_seeklogo-611785.png" alt="OpenRockets" class="school-logo">
-                <img src="assets/i/static-v3/logo_flag.png" alt="OpenRockets Flag" class="school-logo">
-                <img src="assets/i/static-v3/pngtree-dendabor-kindergarten-high-school-logo-vector-png-image_16230886.png" alt="OpenRockets Flag" class="school-logo">
-                <img src="assets/i/static-v3/University_of_Moratuwa_logo.png" alt="OpenRockets Flag" class="school-logo">
-                 <img src="assets/i/static-v3/logo.png" alt="OpenRockets" class="school-logo">
-                  <img src="assets/i/static-v3/logo-web-back.png" alt="OpenRockets" class="school-logo">
-                   <img src="assets/i/static-v3/logo1.png" alt="OpenRockets" class="school-logo">
-                    <img src="assets/i/static-v3/site-logo.svg" alt="OpenRockets" class="school-logo">
-                    <img src="assets/i/static-v3/Logo_of_Nalanda_College_Colombo.png" alt="Nalanda College Colombo" class="school-logo">
-                <img src="assets/i/static-v3/royal-college-black.png" alt="Royal College" class="school-logo">
-                <img src="assets/i/static-v3/St_John's_College_Jaffna_crest.png" alt="St John's College Jaffna" class="school-logo">
-                <img src="assets/i/static-v3/sliit-campus-logo-png_seeklogo-611785.png" alt="OpenRockets" class="school-logo">
-                <img src="assets/i/static-v3/logo_flag.png" alt="OpenRockets Flag" class="school-logo">
-                <img src="assets/i/static-v3/pngtree-dendabor-kindergarten-high-school-logo-vector-png-image_16230886.png" alt="OpenRockets Flag" class="school-logo">
-                <img src="assets/i/static-v3/University_of_Moratuwa_logo.png" alt="OpenRockets Flag" class="school-logo">
-                 <img src="assets/i/static-v3/logo.png" alt="OpenRockets" class="school-logo">
-                  <img src="assets/i/static-v3/logo-web-back.png" alt="OpenRockets" class="school-logo">
-                   <img src="assets/i/static-v3/logo1.png" alt="OpenRockets" class="school-logo">
-                    <img src="assets/i/static-v3/site-logo.svg" alt="OpenRockets" class="school-logo">
-                    <img src="assets/i/static-v3/Logo_of_Nalanda_College_Colombo.png" alt="Nalanda College Colombo" class="school-logo">
-                <img src="assets/i/static-v3/royal-college-black.png" alt="Royal College" class="school-logo">
-                <img src="assets/i/static-v3/St_John's_College_Jaffna_crest.png" alt="St John's College Jaffna" class="school-logo">
-                <img src="assets/i/static-v3/sliit-campus-logo-png_seeklogo-611785.png" alt="OpenRockets" class="school-logo">
-                <img src="assets/i/static-v3/logo_flag.png" alt="OpenRockets Flag" class="school-logo">
-                <img src="assets/i/static-v3/pngtree-dendabor-kindergarten-high-school-logo-vector-png-image_16230886.png" alt="OpenRockets Flag" class="school-logo">
-                <img src="assets/i/static-v3/University_of_Moratuwa_logo.png" alt="OpenRockets Flag" class="school-logo">
-                 <img src="assets/i/static-v3/logo.png" alt="OpenRockets" class="school-logo">
-                  <img src="assets/i/static-v3/logo-web-back.png" alt="OpenRockets" class="school-logo">
-                   <img src="assets/i/static-v3/logo1.png" alt="OpenRockets" class="school-logo">
-                    <img src="assets/i/static-v3/site-logo.svg" alt="OpenRockets" class="school-logo">
-                    <img src="assets/i/static-v3/Logo_of_Nalanda_College_Colombo.png" alt="Nalanda College Colombo" class="school-logo">
-                <img src="assets/i/static-v3/royal-college-black.png" alt="Royal College" class="school-logo">
-                <img src="assets/i/static-v3/St_John's_College_Jaffna_crest.png" alt="St John's College Jaffna" class="school-logo">
-                <img src="assets/i/static-v3/sliit-campus-logo-png_seeklogo-611785.png" alt="OpenRockets" class="school-logo">
-                <img src="assets/i/static-v3/logo_flag.png" alt="OpenRockets Flag" class="school-logo">
-                <img src="assets/i/static-v3/pngtree-dendabor-kindergarten-high-school-logo-vector-png-image_16230886.png" alt="OpenRockets Flag" class="school-logo">
-                <img src="assets/i/static-v3/University_of_Moratuwa_logo.png" alt="OpenRockets Flag" class="school-logo">
-                 <img src="assets/i/static-v3/logo.png" alt="OpenRockets" class="school-logo">
-                  <img src="assets/i/static-v3/logo-web-back.png" alt="OpenRockets" class="school-logo">
-                   <img src="assets/i/static-v3/logo1.png" alt="OpenRockets" class="school-logo">
-                    <img src="assets/i/static-v3/site-logo.svg" alt="OpenRockets" class="school-logo">
-                    <img src="assets/i/static-v3/Logo_of_Nalanda_College_Colombo.png" alt="Nalanda College Colombo" class="school-logo">
-                <img src="assets/i/static-v3/royal-college-black.png" alt="Royal College" class="school-logo">
-                <img src="assets/i/static-v3/St_John's_College_Jaffna_crest.png" alt="St John's College Jaffna" class="school-logo">
-                <img src="assets/i/static-v3/sliit-campus-logo-png_seeklogo-611785.png" alt="OpenRockets" class="school-logo">
-                <img src="assets/i/static-v3/logo_flag.png" alt="OpenRockets Flag" class="school-logo">
-                <img src="assets/i/static-v3/pngtree-dendabor-kindergarten-high-school-logo-vector-png-image_16230886.png" alt="OpenRockets Flag" class="school-logo">
-                <img src="assets/i/static-v3/University_of_Moratuwa_logo.png" alt="OpenRockets Flag" class="school-logo">
-                 <img src="assets/i/static-v3/logo.png" alt="OpenRockets" class="school-logo">
-                  <img src="assets/i/static-v3/logo-web-back.png" alt="OpenRockets" class="school-logo">
-                   <img src="assets/i/static-v3/logo1.png" alt="OpenRockets" class="school-logo">
-                    <img src="assets/i/static-v3/site-logo.svg" alt="OpenRockets" class="school-logo">
-                    <img src="assets/i/static-v3/Logo_of_Nalanda_College_Colombo.png" alt="Nalanda College Colombo" class="school-logo">
-                <img src="assets/i/static-v3/royal-college-black.png" alt="Royal College" class="school-logo">
-                <img src="assets/i/static-v3/St_John's_College_Jaffna_crest.png" alt="St John's College Jaffna" class="school-logo">
-                <img src="assets/i/static-v3/sliit-campus-logo-png_seeklogo-611785.png" alt="OpenRockets" class="school-logo">
-                <img src="assets/i/static-v3/logo_flag.png" alt="OpenRockets Flag" class="school-logo">
-                <img src="assets/i/static-v3/pngtree-dendabor-kindergarten-high-school-logo-vector-png-image_16230886.png" alt="OpenRockets Flag" class="school-logo">
-                <img src="assets/i/static-v3/University_of_Moratuwa_logo.png" alt="OpenRockets Flag" class="school-logo">
-                 <img src="assets/i/static-v3/logo.png" alt="OpenRockets" class="school-logo">
-                  <img src="assets/i/static-v3/logo-web-back.png" alt="OpenRockets" class="school-logo">
-                   <img src="assets/i/static-v3/logo1.png" alt="OpenRockets" class="school-logo">
-                    <img src="assets/i/static-v3/site-logo.svg" alt="OpenRockets" class="school-logo">
-                <!-- Duplicate for seamless loop -->
-               
-                
-            </div>
-        </div>
-    </section>
-
-    <!-- Features Section -->
-    <section id="about" class="features">
-        <div class="section-header">
-            <h2 class="section-title">Build Amazing Things</h2>
-            <p class="section-subtitle">
-                Whether you're just starting out or you're a seasoned developer, 
-                OpenRockets provides everything you need to create and collaborate on open-source projects.
-            </p>
-        </div>
-        
-        <div class="features-grid">
-            <div class="feature-card">
-                <div class="feature-card-image">
-                    <img src="assets/i/uploads/pngimg.com - laptop_PNG101830.png" alt="Modern Development" style="border-radius: 16px 16px 0 0;">
-                </div>
-                <div class="feature-card-content">
-                    <div class="feature-meta">
-                        <span class="feature-category">DEVELOPMENT</span>
-                    </div>
-                    <h3 class="feature-title">Open Source Projects</h3>
-                    <p class="feature-description">
-                        Contribute to real-world projects like OpenSocial, our comprehensive social media platform, 
-                        and web-dev-error-solutions with 2.9k+ GitHub stars.
-                    </p>
-                    <a href="https://github.com/OpenRockets" target="_blank" class="feature-link">
-                        View Projects <i class="fas fa-arrow-right"></i>
-                    </a>
-                </div>
-            </div>
-            
-            <div class="feature-card">
-                <div class="feature-card-image" style="background: linear-gradient(135deg, var(--ada-green), var(--ada-blue));">
-                    <i class="fas fa-users" style="font-size: 3rem; color: white;"></i>
-                </div>
-                <div class="feature-card-content">
-                    <div class="feature-meta">
-                        <span class="feature-category">COMMUNITY</span>
-                    </div>
-                    <h3 class="feature-title">Global Community</h3>
-                    <p class="feature-description">
-                        Connect with builders from Sri Lanka and around the world. Share knowledge, 
-                        get feedback, and collaborate on innovative solutions.
-                    </p>
-                    <a href="https://bit.ly/openrockets-discord" target="_blank" class="feature-link">
-                        Join Community <i class="fas fa-arrow-right"></i>
-                    </a>
-                </div>
-            </div>
-            
-            <div class="feature-card">
-                <div class="feature-card-image">
-                    <img src="assets/i/uploads/pngtree-aesthetic-dvd-or-cd-disk-png-image_5888606.png" alt="Learning Resources" style="border-radius: 16px 16px 0 0;">
-                </div>
-                <div class="feature-card-content">
-                    <div class="feature-meta">
-                        <span class="feature-category">LEARNING</span>
-                    </div>
-                    <h3 class="feature-title">Learn by Building</h3>
-                    <p class="feature-description">
-                        Master new technologies through hands-on projects. From JavaScript to complex 
-                        web applications, learn with real-world experience.
-                    </p>
-                    <a href="/learn.html" class="feature-link">
-                        Start Learning <i class="fas fa-arrow-right"></i>
-                    </a>
-                </div>
-            </div>
-            
-            <div class="feature-card">
-                <div class="feature-card-image" style="background: linear-gradient(135deg, var(--ada-orange), var(--ada-pink));">
-                    <i class="fas fa-calendar-alt" style="font-size: 3rem; color: white;"></i>
-                </div>
-                <div class="feature-card-content">
-                    <div class="feature-meta">
-                        <span class="feature-category">EVENTS</span>
-                    </div>
-                    <h3 class="feature-title">Hackathons & Events</h3>
-                    <p class="feature-description">
-                        Participate in coding competitions, workshops, and hackathons. Win prizes, 
-                        gain recognition, and showcase your skills to the community.
-                    </p>
-                    <a href="#events" class="feature-link">
-                        View Events <i class="fas fa-arrow-right"></i>
-                    </a>
-                </div>
-            </div>
-            
-            <div class="feature-card">
-                <div class="feature-card-image">
-                    <img src="assets/i/uploads/AE047A9E8D150297E2CF610FEF5BCEE69C442913_IXPANDFLASHDRIVEGOUPMAIN_gallery.png" alt="Developer Tools" style="border-radius: 16px 16px 0 0;">
-                </div>
-                <div class="feature-card-content">
-                    <div class="feature-meta">
-                        <span class="feature-category">TOOLS</span>
-                    </div>
-                    <h3 class="feature-title">Modern Tools</h3>
-                    <p class="feature-description">
-                        Access cutting-edge development tools, GitHub integration, and 
-                        infrastructure to bring your innovative ideas to life.
-                    </p>
-                    <a href="https://github.com/OpenRockets" target="_blank" class="feature-link">
-                        Explore Tools <i class="fas fa-arrow-right"></i>
-                    </a>
-                </div>
-            </div>
-            
-            <div class="feature-card">
-                <div class="feature-card-image" style="background: linear-gradient(135deg, var(--ada-purple), var(--ada-blue));">
-                    <i class="fas fa-trophy" style="font-size: 3rem; color: white;"></i>
-                </div>
-                <div class="feature-card-content">
-                    <div class="feature-meta">
-                        <span class="feature-category">REWARDS</span>
-                    </div>
-                    <h3 class="feature-title">Recognition & Rewards</h3>
-                    <p class="feature-description">
-                        Top contributors receive free domain names, full project ownership, 
-                        and media recognition. Build your reputation in the open-source community.
-                    </p>
-                    <a href="/join.html" class="feature-link">
-                        Get Recognized <i class="fas fa-arrow-right"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="partnership-section">
-        <div class="partnership-content">
-            <div style="text-align: center; margin-bottom: 3rem;">
-                <h2 style="font-size: 2rem; font-weight: 800; color: #2C3E50; margin-bottom: 1rem;">
-                    In partnetship with,
-                </h2>
-            </div>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 2rem; align-items: center; justify-items: center;">
-                 <img src="assets/i/static-v3/opennetwork-collective-alliance.png" alt="OpenRockets" class="school-logo">
-                  <img src="assets/i/static-v3/static1.squarespace.webp" alt="OpenRockets" class="school-logo">
-                   <img src="assets/i/static-v3//flag-orpheus-left.png" alt="OpenRockets" class="school-logo">
-                    <img src="assets/i/static-v3/logo.png" alt="OpenRockets" class="school-logo">
-            </div>
-        </div>
-    </section>
-    <!-- Partnership/Testimonial Section -->
-    <section class="partnership-section">
-        <div class="partnership-content">
-            <div style="display: flex; align-items: flex-start; gap: 2rem; position: relative; z-index: 10;">
-                <div style="flex: 1;">
-                    <div style="background: #2C3E50; color: white; padding: 1rem; border-radius: 8px; margin-bottom: 2rem; display: inline-block;">
-                        <i class="fas fa-quote-left" style="font-size: 1.5rem;"></i>
-                    </div>
-                    <blockquote style="font-size: 1.2rem; line-height: 1.6; color: #2C3E50; margin-bottom: 2rem; font-style: italic;">
-                        "OpenRockets is cool, I'm wodering how they could pitch this innovative idea in Sri Lanka, This is a whole new ecosystem. When I leave Sri Lanka at 12, it was so different. I hope to visit Sri Lanka again."
-                    </blockquote>
+                <div class="magazine-grid">
                     <div>
-                        <p style="font-weight: 700; color: #2C3E50; margin-bottom: 0.5rem;">Ranithu Raddolugama</p>
-                        <p style="color: #7F8C8D; font-size: 0.9rem;">Seattle, Washington, United States</p>
+                        <img src="v/openrockets.png" alt="OpenRockets Foundation Logo" class="magazine-cover">
                     </div>
-                </div>
-                <div style="flex-shrink: 0;">
-                    <img src="i/sketches/1616718303773.jpg" alt="Community" style="width: 200px; height: 150px; object-fit: cover; border-radius: 12px; box-shadow: 0 8px 32px rgba(0,0,0,0.1);">
+                    <div>
+                        <h3>Featured Content</h3>
+                        <p>OpenRockets Magazine is our premier publication featuring in-depth technical articles, community spotlights, project updates, and industry insights. The magazine serves as a comprehensive resource for developers, educators, and technology enthusiasts interested in open source innovation.</p>
+                        
+                        <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem;">What You'll Find:</h4>
+                        <ul style="color: var(--text-secondary); line-height: 1.8; margin-left: 1.5rem;">
+                            <li>Technical tutorials and best practices</li>
+                            <li>Community member spotlights and success stories</li>
+                            <li>Project updates and release announcements</li>
+                            <li>Industry trends and open source news</li>
+                            <li>Educational resources and learning guides</li>
+                        </ul>
+                        
+                        <div style="margin-top: 1.5rem;">
+                            <a href="https://openrocketsmag.com" target="_blank" class="btn-professional">Visit Magazine</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Angular Divider -->
-    <div class="angular-divider"></div>
-
-    <!-- Projects Showcase -->
-    <section id="projects" class="features">
-        <div class="section-header">
-            <div>
-                <h2 class="section-title">LATEST NEWS AND FEATURES</h2>
-                <p class="section-subtitle">
-                    Check out some of the incredible open-source projects our community has built and maintains.
-                </p>
-            </div>
-            <a href="#news" class="view-all-link">View all</a>
-        </div>
-        
-        <div class="features-grid">
-            <div class="feature-card">
-                <div class="feature-card-image">
-                    <img src="i/sketches/216719080.png" alt="OpenSocial Platform" style="border-radius: 16px 16px 0 0;">
-                </div>
-                <div class="feature-card-content">
-                    <div class="feature-meta">
-                        <span class="feature-category">PROJECT</span>
-                        <span class="feature-date">• SEPTEMBER 21 2025</span>
-                    </div>
-                    <h3 class="feature-title">OpenSocial Platform Remains Top for 4th Year in a row!</h3>
-                    <p class="feature-description">
-                        Build Sri Lanka's most comprehensive open-source social media platform! 
-                        Top 3 contributors receive free domain names and full platform ownership.
-                    </p>
-                    <a href="https://github.com/OpenRockets/opensocial" target="_blank" rel="noopener" class="feature-link">
-                        Open Source <i class="fas fa-arrow-right"></i>
-                    </a>
-                </div>
-            </div>
+    <!-- Projects Section -->
+    <section id="projects" class="professional-section">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <p class="section-subtitle">Open source projects developed and maintained by the OpenRockets community.</p>
             
-            <div class="feature-card">
-                <div class="feature-card-image">
-                    <img src="assets/i/uploads/pngtree-old-laptop-computer-obsolete-white-dirty-png-image_14053775.png" alt="Web Development" style="border-radius: 16px 16px 0 0;">
+            <div class="grid-2">
+                <div class="professional-card">
+                    <h3>OpenSocial Platform</h3>
+                    <p>A comprehensive open source social media platform built for scalability and privacy. The platform demonstrates best practices in modern web development and includes features for community building, content sharing, and real-time communication.</p>
+                    <p style="margin-top: 1rem;"><strong>Technologies:</strong> Node.js, Express, React, MongoDB</p>
+                    <a href="https://github.com/OpenRockets/opensocial" target="_blank" style="margin-top: 1rem; display: inline-block;">View on GitHub →</a>
                 </div>
-                <div class="feature-card-content">
-                    <div class="feature-meta">
-                        <span class="feature-category">COMMUNITY STORY</span>
-                        <span class="feature-date">• SEPTEMBER 18 2025</span>
-                    </div>
-                    <h3 class="feature-title">Web Dev Error Solutions – Community Spotlight</h3>
-                    <p class="feature-description">
-                        A community-curated handbook with 2,948+ GitHub stars for common web development 
-                        errors. Find fixes for JavaScript, React, Node.js, CSS, and more!
-                    </p>
-                    <a href="https://github.com/OpenRockets/web-dev-error-solutions" target="_blank" rel="noopener" class="feature-link">
-                        Community <i class="fas fa-arrow-right"></i>
-                    </a>
+                
+                <div class="professional-card">
+                    <h3>Web Development Error Solutions</h3>
+                    <p>A community-curated repository of common web development errors and their solutions. With over 2,900 GitHub stars, this project has become an essential resource for developers troubleshooting JavaScript, React, Node.js, and CSS issues.</p>
+                    <p style="margin-top: 1rem;"><strong>Technologies:</strong> Documentation, JavaScript, React, Node.js</p>
+                    <a href="https://github.com/OpenRockets/web-dev-error-solutions" target="_blank" style="margin-top: 1rem; display: inline-block;">View on GitHub →</a>
                 </div>
-            </div>
-            
-            <div class="feature-card">
-                <div class="feature-card-image">
-                    <img src="v/cityofgits-summercap-dark-lg-4000x1010.png" alt="CityofGits Game" style="border-radius: 16px 16px 0 0; background: linear-gradient(135deg, var(--ada-green), var(--ada-blue));">
+                
+                <div class="professional-card">
+                    <h3>Learning Management System</h3>
+                    <p>A modern, full-stack LMS built with Node.js and AstraDB. Features include user authentication, course management, community interactions, real-time messaging, and event scheduling for educational institutions.</p>
+                    <p style="margin-top: 1rem;"><strong>Technologies:</strong> Node.js, Express, AstraDB, WebSocket</p>
+                    <a href="https://github.com/OpenRockets/openrockets.com" target="_blank" style="margin-top: 1rem; display: inline-block;">View on GitHub →</a>
                 </div>
-                <div class="feature-card-content">
-                    <div class="feature-meta">
-                        <span class="feature-category">PROJECT</span>
-                        <span class="feature-date">• AUGUST 15 2025</span>
-                    </div>
-                    <h3 class="feature-title">CityOfGits</h3>
-                    <p class="feature-description">
-                       CityofGits was created by Neksha DeSilva, with partnership with OpenRockets Founadation. You must play it!
-                    </p>
-                    <a href="https://github.com/OpenRockets/CityofGits" target="_blank" rel="noopener" class="feature-link">
-                        Projects <i class="fas fa-arrow-right"></i>
-                    </a>
+                
+                <div class="professional-card">
+                    <h3>CityOfGits</h3>
+                    <p>An innovative game development project created in partnership with the OpenRockets Foundation. Demonstrates creative applications of open source technologies in game development and interactive experiences.</p>
+                    <p style="margin-top: 1rem;"><strong>Technologies:</strong> Game Development, Unity, JavaScript</p>
+                    <a href="https://github.com/OpenRockets/CityofGits" target="_blank" style="margin-top: 1rem; display: inline-block;">View on GitHub →</a>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Events Section -->
-    <section id="events" class="features">
-        <div class="section-header">
-            <h2 class="section-title">Upcoming <span class="text-gradient">Events</span></h2>
-            <p class="section-subtitle">
-                Join our exciting events, hackathons, and game jams happening around Sri Lanka and online.
-            </p>
-        </div>
-        
-        <div class="features-grid">
-            <div class="feature-card glow hackclub-featured">
-                <div class="feature-icon">
-                    <img src="assets/i/static-v3/hackclub.png" alt="HackClub" style="width: 40px; height: 40px; border-radius: 8px;">
-                </div>
-                <h3 class="feature-title">HackClub DayDream Sri Lanka</h3>
-                <p class="feature-description">
-                    🎮 The ultimate 24-hour game development hackathon! Create amazing games using Unity, 
-                    Unreal Engine, or any game development tool. Perfect for beginners to advanced developers. 
-                    Join us live in Colombo and multiple locations across Sri Lanka.
-                </p>
-                <div class="event-details-compact">
-                    <p><strong>What is DayDream?</strong> A 24-hour game jam inspired by HackClub's philosophy of learning by building. Teams collaborate to create games from scratch, experiment with new tools, and showcase their creativity.</p>
-                    <p><strong>Who can join?</strong> Any student or young developer interested in game development - from complete beginners to experienced programmers.</p>
-                    <p><strong>What you'll need:</strong> A laptop, creativity, and enthusiasm! We'll provide tutorials, mentors, and support.</p>
-                </div>
-                <div class="event-meta">
-                    <span class="event-location">📍 Colombo & Multiple Locations</span>
-                    <span class="event-timing">🕐 24-Hour Challenge</span>
-                    <span class="event-level">👥 All Skill Levels</span>
-                    <span class="event-tools">🎮 Unity, Unreal, JavaScript & More</span>
-                    <span class="event-community">📱 Live WhatsApp Updates & Support</span>
-                </div>
-                <a href="https://whatsapp.com/channel/0029VbBBU1p3mFY2WbU2xL0v" target="_blank" class="project-link event-register-link">
-                    <i class="fab fa-whatsapp"></i> Join WhatsApp Channel for Updates
-                </a>
-            </div>
-            
-            <div class="feature-card">
-                <div class="feature-icon">
-                    <i class="fas fa-calendar-alt"></i>
-                </div>
-                <h3 class="feature-title">Weekly Coding Sessions</h3>
-                <p class="feature-description">
-                    Join our weekly coding sessions where we work on open-source projects, 
-                    share knowledge, and help each other grow as developers.
-                </p>
-                <a href="calendar.html" class="project-link">
-                    <i class="fas fa-calendar"></i> View Calendar
-                </a>
-            </div>
-            
-            <div class="feature-card">
-                <div class="feature-icon">
-                    <i class="fab fa-github"></i>
-                </div>
-                <h3 class="feature-title">Contribution Challenges</h3>
-                <p class="feature-description">
-                    Take part in our monthly contribution challenges. Solve GitHub issues, 
-                    win prizes, and get recognition in the developer community.
-                </p>
-                <a href="https://github.com/OpenRockets" target="_blank" rel="noopener" class="project-link">
-                    <i class="fas fa-trophy"></i> View Challenges
-                </a>
             </div>
         </div>
     </section>
 
     <!-- Community Section -->
-    <section id="community" class="features">
-        <div class="section-header">
-            <h2 class="section-title">Join Our <span class="text-gradient">Community</span></h2>
-            <p class="section-subtitle">
-                Connect with builders from around the world and collaborate on amazing open-source projects.
-            </p>
-        </div>
-        
-        <div class="features-grid">
-            <div class="feature-card">
-                <div class="feature-icon">
-                    <i class="fab fa-discord"></i>
-                </div>
-                <h3 class="feature-title">Discord Server</h3>
-                <p class="feature-description">
-                    Join our active Discord community where developers collaborate, share knowledge, 
-                    and get help with coding challenges 24/7.
-                </p>
-                <a href="https://bit.ly/openrockets-discord" target="_blank" rel="noopener" class="project-link">
-                    <i class="fab fa-discord"></i> Join Discord
-                </a>
-            </div>
+    <section id="community" class="professional-section alt">
+        <div class="container">
+            <h2 class="section-title">Community & Partnerships</h2>
+            <p class="section-subtitle">Building a global network of developers, educators, and organizations committed to open source innovation.</p>
             
-            <div class="feature-card">
-                <div class="feature-icon">
-                    <i class="fab fa-github"></i>
-                </div>
-                <h3 class="feature-title">GitHub Organization</h3>
-                <p class="feature-description">
-                    Contribute to our 18+ repositories, create pull requests, and collaborate 
-                    with developers worldwide on innovative projects.
-                </p>
-                <a href="https://github.com/OpenRockets" target="_blank" rel="noopener" class="project-link">
-                    <i class="fab fa-github"></i> View Organization
-                </a>
-            </div>
-            
-            <div class="feature-card">
-                <div class="feature-icon">
-                    <i class="fas fa-envelope"></i>
-                </div>
-                <h3 class="feature-title">Official Contact</h3>
-                <p class="feature-description">
-                    Reach out for partnerships, collaborations, or general inquiries. 
-                    We're always open to new opportunities and connections.
-                </p>
-                <a href="mailto:official@openrockets.com" class="project-link">
-                    <i class="fas fa-envelope"></i> Contact Us
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- News & Updates Section -->
-    <section id="news" class="news-section">
-        <div class="section-header">
-            <h2 class="section-title">Latest <span class="text-gradient">Updates</span></h2>
-            <p class="section-subtitle">
-                Stay up to date with OpenRockets announcements, project updates, and community highlights.
-            </p>
-        </div>
-        
-        <div class="news-container">
-            <div class="news-content">
-                <div class="twitter-timeline-container">
-                    <h3 class="timeline-title">
-                        <i class="fab fa-twitter"></i>
-                        Recent Announcements
-                    </h3>
-                    <div class="twitter-embed">
-                        <a class="twitter-timeline" 
-                           data-height="400" 
-                           data-theme="dark" 
-                           data-chrome="noheader nofooter noborders transparent"
-                           href="https://twitter.com/OpenRockets?ref_src=twsrc%5Etfw">
-                           Tweets by OpenRockets
-                        </a>
-                        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-                    </div>
+            <div class="grid-3">
+                <div class="professional-card">
+                    <h3>For Developers</h3>
+                    <p>Contribute to real-world open source projects, collaborate with experienced developers, and build your professional portfolio. Gain recognition and advance your career through meaningful contributions.</p>
+                    <a href="join.html" style="margin-top: 1rem; display: inline-block;">Join as Developer →</a>
                 </div>
                 
-                <div class="quick-links">
-                    <h3 class="quick-links-title">
-                        <i class="fas fa-bolt"></i>
-                        Quick Updates
-                    </h3>
-                    <div class="update-items">
-                        <div class="update-item">
-                            <div class="update-icon">
-                                <i class="fas fa-gamepad"></i>
-                            </div>
-                            <div class="update-content">
-                                <h4>HackClub DayDream SL</h4>
-                                <p>Game jam happening September 27th - Join the WhatsApp channel for updates!</p>
-                                <a href="https://whatsapp.com/channel/0029VbBBU1p3mFY2WbU2xL0v" target="_blank" class="update-link">
-                                    <i class="fab fa-whatsapp"></i> Join Channel
-                                </a>
-                            </div>
-                        </div>
-                        
-                        <div class="update-item">
-                            <div class="update-icon">
-                                <i class="fab fa-github"></i>
-                            </div>
-                            <div class="update-content">
-                                <h4>OpenSocial Platform</h4>
-                                <p>Active development continues - contribute and win free domains!</p>
-                                <a href="https://github.com/OpenRockets/opensocial" target="_blank" class="update-link">
-                                    <i class="fas fa-code"></i> Contribute
-                                </a>
-                            </div>
-                        </div>
-                        
-                        <div class="update-item">
-                            <div class="update-icon">
-                                <i class="fab fa-discord"></i>
-                            </div>
-                            <div class="update-content">
-                                <h4>Discord Community</h4>
-                                <p>Join our active community for daily coding discussions and collaboration.</p>
-                                <a href="https://bit.ly/openrockets-discord" target="_blank" class="update-link">
-                                    <i class="fab fa-discord"></i> Join Discord
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+                <div class="professional-card">
+                    <h3>For Students</h3>
+                    <p>Learn by building real applications, participate in hackathons and workshops, and connect with mentors. Access educational resources and hands-on projects to accelerate your learning.</p>
+                    <a href="learn.html" style="margin-top: 1rem; display: inline-block;">Start Learning →</a>
                 </div>
+                
+                <div class="professional-card">
+                    <h3>For Organizations</h3>
+                    <p>Partner with OpenRockets to support open source development, hire talented contributors, and give back to the community. Strengthen your organization's commitment to open source.</p>
+                    <a href="mailto:official@openrockets.com" style="margin-top: 1rem; display: inline-block;">Contact Us →</a>
+                </div>
+            </div>
+
+            <div style="margin-top: 3rem; text-align: center;">
+                <h3 style="margin-bottom: 1.5rem;">Partner Institutions</h3>
+                <p style="color: var(--text-secondary); max-width: 700px; margin: 0 auto 2rem;">OpenRockets collaborates with educational institutions and organizations across Sri Lanka, India, and the Maldives, including universities, colleges, and secondary schools.</p>
             </div>
         </div>
     </section>
 
-    <!-- Angular Divider -->
-    <div class="angular-divider"></div>
-
-    <!-- Partnership Section -->
-
-
-    <!-- CTA Section -->
-    <section class="cta">
-        <div class="cta-content">
-            <h2 class="cta-title">Ready to Start Building?</h2>
-            <p class="cta-description">
-                Join 31+ followers on GitHub and contribute to innovative open-source projects. 
-                Level up, Challenge, Grow, Contribute with OpenRockets.
-            </p>
-            <div class="hero-cta">
-                <a href="join.html" class="btn btn-primary btn-large pulse">
-                    <i class="fas fa-rocket"></i>
-                    Join OpenRockets
-                </a>
-                <a href="https://bit.ly/openrockets-discord" class="btn btn-secondary btn-large" target="_blank" rel="noopener">
-                    <i class="fab fa-discord"></i>
-                    Join Discord
-                </a>
+    <!-- Call to Action Section -->
+    <section class="professional-section">
+        <div class="container">
+            <div style="text-align: center; padding: 3rem 0; background: var(--neutral-light); border-radius: 4px;">
+                <h2>Get Involved with OpenRockets</h2>
+                <p style="max-width: 600px; margin: 1rem auto 2rem; color: var(--text-secondary);">Join our community of developers and contributors working on innovative open source projects. Whether you're a student, professional developer, or organization, there's a place for you in OpenRockets.</p>
+                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                    <a href="join.html" class="btn-professional">Join Community</a>
+                    <a href="https://github.com/OpenRockets" target="_blank" class="btn-professional" style="background: #24292e;">
+                        <i class="fab fa-github"></i> View on GitHub
+                    </a>
+                    <a href="https://bit.ly/openrockets-discord" target="_blank" class="btn-professional" style="background: #5865F2;">
+                        <i class="fab fa-discord"></i> Join Discord
+                    </a>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-        <footer class="footer">
+    <footer class="professional-footer" id="contact">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-             
-                    <div>
-                        <img draggable="false" src="./v/openrockets.png" alt="logo" style="transform: translateX(-.3rem); width: 11rem;">
-                        <p>We Contribute.</p>
-                    </div>
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h4>OpenRockets Foundation</h4>
+                    <p style="color: rgba(255, 255, 255, 0.7); line-height: 1.6;">A non-profit organization advancing open source software, education, and innovation through collaborative development and community building.</p>
                 </div>
-                <div class="footer-links">
-                    <div class="footer-section">
-                        <h5>Community</h5>
-                        <ul>
-                            <li><a href="index.html#about">About Us</a></li>
-                            <li><a href="index.html#mission">Mission</a></li>
-                            <li><a href="https://openrockets.com">Website</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-section">
-                        <h5>Connect</h5>
-                        <ul>
-                            <li><a href="https://github.com/openrockets">GitHub</a></li>
-                            <li><a href="https://bit.ly/openrockets-discord">Discord</a></li>
-                            <li><a href="index.html#projects">Projects</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-section">
-                        <h5>Legal</h5>
-                        <ul>
-                            <li><span>Law</span></li>
-                            <li><span>Transparency</span></li>
-                        </ul>
-                    </div>
+                
+                <div class="footer-section">
+                    <h4>Projects</h4>
+                    <ul>
+                        <li><a href="https://github.com/OpenRockets/opensocial">OpenSocial Platform</a></li>
+                        <li><a href="https://github.com/OpenRockets/web-dev-error-solutions">Web Dev Solutions</a></li>
+                        <li><a href="https://github.com/OpenRockets/CityofGits">CityOfGits</a></li>
+                        <li><a href="https://github.com/OpenRockets">All Projects</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Community</h4>
+                    <ul>
+                        <li><a href="https://github.com/OpenRockets">GitHub</a></li>
+                        <li><a href="https://bit.ly/openrockets-discord">Discord</a></li>
+                        <li><a href="https://openrocketsmag.com">Magazine</a></li>
+                        <li><a href="join.html">Join Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Code of Conduct</a></li>
+                        <li><a href="#">Transparency</a></li>
+                    </ul>
                 </div>
             </div>
+            
             <div class="footer-bottom">
-               <br> <p>&copy; 2025 OpenRockets Foundation (not-for-profit) Organization.<br>OpenRockets Foundation is a 501(c)(3) registered non-profit organization, in United States of America. Operated in Colombo, Sri Lanka.</p>
+                <p>&copy; 2025 OpenRockets Foundation. A 501(c)(3) registered non-profit organization in the United States of America. Operated in Colombo, Sri Lanka.</p>
             </div>
         </div>
     </footer>
 
     <!-- Scripts -->
     <script src="scripts/navigation.js"></script>
-    <script src="scripts/hackclub-interactions.js"></script>
-    
-    <!-- Parrot Assistant -->
-    <div id="parrot-assistant" class="parrot-assistant">
-        <div class="parrot-container">
-            <img src="i/sketches/original-3fa57b946259b381c92d2fc9a819b746.gif" alt="Parrot Assistant" class="parrot-gif">
-            <div class="parrot-speech-bubble" id="parrot-bubble">
-                <div class="bubble-content" id="bubble-content">
-                    Welcome to OpenRockets! 🚀
-                </div>
-                <div class="bubble-tail"></div>
-            </div>
-            <div class="parrot-category-badge" id="category-badge">Tips</div>
-        </div>
-        
-    </div>
-    <script></script>
-    <script src="scripts/parrot-assistant.js"></script>
-
-    <!-- HackClub DayDream Floating Button -->
-    
 </body>
 </html>
