@@ -24,7 +24,14 @@ document.addEventListener('DOMContentLoaded', function() {
     const closeEventModal = document.getElementById('closeEventModal');
     const eventForm = document.getElementById('eventForm');
     
-    // Sample events data
+    // Sample events data - using relative dates from the current date
+    const baseDate = new Date();
+    const getDateOffset = (daysOffset) => {
+        const date = new Date(baseDate);
+        date.setDate(baseDate.getDate() + daysOffset);
+        return date;
+    };
+    
     const sampleEvents = [
         {
             id: 1,
@@ -32,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function() {
             type: 'lecture',
             instructor: 'Sarah Chen',
             time: '10:00 AM - 11:30 AM',
-            date: new Date(2024, 11, 23),
+            date: getDateOffset(0),
             description: 'Deep dive into advanced React patterns including HOCs, render props, and custom hooks.',
             attendees: 45,
             maxAttendees: 50,
@@ -44,7 +51,7 @@ document.addEventListener('DOMContentLoaded', function() {
             type: 'workshop',
             instructor: 'Mike Johnson',
             time: '2:00 PM - 4:00 PM',
-            date: new Date(2024, 11, 23),
+            date: getDateOffset(0),
             description: 'Hands-on workshop covering lists, dictionaries, sets, and tuples in Python.',
             attendees: 32,
             maxAttendees: 40,
@@ -56,7 +63,7 @@ document.addEventListener('DOMContentLoaded', function() {
             type: 'lecture',
             instructor: 'Alex Rodriguez',
             time: '11:00 AM - 12:30 PM',
-            date: new Date(2024, 11, 24),
+            date: getDateOffset(1),
             description: 'Optimization techniques for Node.js applications including clustering and caching.',
             attendees: 28,
             maxAttendees: 35,
@@ -68,7 +75,7 @@ document.addEventListener('DOMContentLoaded', function() {
             type: 'workshop',
             instructor: 'Emma Davis',
             time: '1:00 PM - 3:30 PM',
-            date: new Date(2024, 11, 25),
+            date: getDateOffset(2),
             description: 'Complete guide to CSS Grid layout with practical examples and exercises.',
             attendees: 38,
             maxAttendees: 45,
@@ -80,7 +87,7 @@ document.addEventListener('DOMContentLoaded', function() {
             type: 'lecture',
             instructor: 'Dr. James Wilson',
             time: '9:00 AM - 10:30 AM',
-            date: new Date(2024, 11, 26),
+            date: getDateOffset(3),
             description: 'Fundamental principles of database design, normalization, and optimization.',
             attendees: 52,
             maxAttendees: 60,
