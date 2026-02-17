@@ -112,9 +112,10 @@ body {
 /* Affiliate Nonprofits Grid */
 .affiliates-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 40px;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 24px;
     justify-items: center;
+    align-items: start;
 }
 
 .affiliate-item {
@@ -122,6 +123,9 @@ body {
     text-decoration: none;
     color: inherit;
     transition: opacity 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .affiliate-item:hover {
@@ -129,36 +133,42 @@ body {
 }
 
 .affiliate-logo {
-    width: 136px;
-    height: 136px;
+    width: 100px;
+    height: 100px;
     object-fit: contain;
-    margin-bottom: 16px;
+    margin-bottom: 12px;
     border-radius: 16px;
+    flex-shrink: 0;
 }
 
 .affiliate-logo-text {
-    width: 136px;
-    height: 136px;
+    width: 100px;
+    height: 100px;
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: #1d1d1f;
     color: #ffffff;
-    font-size: 40px;
+    font-size: 32px;
     font-weight: 700;
     border-radius: 16px;
-    margin: 0 auto 16px;
+    margin-bottom: 12px;
+    flex-shrink: 0;
 }
 
 .affiliate-name {
-    font-size: 17px;
+    font-size: 15px;
     font-weight: 500;
     color: #1d1d1f;
     margin-bottom: 4px;
+    min-height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .affiliate-url {
-    font-size: 14px;
+    font-size: 12px;
     color: #86868b;
 }
 
