@@ -1,0 +1,333 @@
+/* OpenRockets Brand Portfolio - Clean Apple-style Design */
+/* Ubuntu Font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Ubuntu', sans-serif;
+    background-color: #ffffff;
+    color: #1d1d1f;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 0 22px;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 80px 0 60px;
+}
+
+.hero-logo {
+    width: 120px;
+    height: auto;
+    filter: invert(1);
+    margin-bottom: 24px;
+}
+
+.hero-title {
+    font-size: 48px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    margin-bottom: 12px;
+    color: #1d1d1f;
+}
+
+.hero-subtitle {
+    font-size: 21px;
+    font-weight: 400;
+    color: #86868b;
+    max-width: 600px;
+    margin: 0 auto 32px;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 16px 32px;
+    background-color: #1d1d1f;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: 500;
+    border-radius: 8px;
+    transition: background-color 0.2s ease;
+}
+
+.cta-button:hover {
+    background-color: #000000;
+}
+
+/* Section Styles */
+.section {
+    padding: 80px 0;
+    border-top: 1px solid #d2d2d7;
+}
+
+.section-title {
+    font-size: 32px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 16px;
+    color: #1d1d1f;
+}
+
+.section-subtitle {
+    font-size: 17px;
+    color: #86868b;
+    text-align: center;
+    margin-bottom: 48px;
+}
+
+/* Affiliate Nonprofits Grid */
+.affiliates-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px;
+    justify-items: center;
+}
+
+.affiliate-item {
+    text-align: center;
+    text-decoration: none;
+    color: inherit;
+    transition: opacity 0.2s ease;
+}
+
+.affiliate-item:hover {
+    opacity: 0.7;
+}
+
+.affiliate-logo {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    margin-bottom: 16px;
+    border-radius: 16px;
+}
+
+.affiliate-logo-text {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #1d1d1f;
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: 700;
+    border-radius: 16px;
+    margin: 0 auto 16px;
+}
+
+.affiliate-name {
+    font-size: 17px;
+    font-weight: 500;
+    color: #1d1d1f;
+    margin-bottom: 4px;
+}
+
+.affiliate-url {
+    font-size: 14px;
+    color: #86868b;
+}
+
+/* Partners Grid */
+.partners-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 32px;
+    justify-items: center;
+}
+
+.partner-item {
+    text-align: center;
+    text-decoration: none;
+    color: inherit;
+    transition: opacity 0.2s ease;
+}
+
+.partner-item:hover {
+    opacity: 0.7;
+}
+
+.partner-logo {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    margin-bottom: 12px;
+}
+
+.partner-name {
+    font-size: 15px;
+    font-weight: 500;
+    color: #1d1d1f;
+}
+
+/* Committee Section - highlighted with subtle gray background for visual separation */
+.committee-section {
+    background-color: #f5f5f7;
+    padding: 80px 0;
+}
+
+.committee-year {
+    margin-bottom: 48px;
+}
+
+.committee-year:last-child {
+    margin-bottom: 0;
+}
+
+.committee-year-title {
+    font-size: 24px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 24px;
+    color: #1d1d1f;
+}
+
+.committee-members {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+}
+
+.committee-member {
+    padding: 8px 20px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    font-size: 15px;
+    color: #1d1d1f;
+}
+
+/* Sponsors Section */
+.sponsors-section {
+    text-align: center;
+    padding: 60px 0;
+    border-top: 1px solid #d2d2d7;
+}
+
+.sponsors-text {
+    font-size: 14px;
+    color: #86868b;
+    line-height: 2;
+}
+
+.sponsors-text strong {
+    color: #1d1d1f;
+}
+
+/* Footer */
+.footer {
+    background-color: #1d1d1f;
+    color: #f5f5f7;
+    padding: 48px 0 24px;
+}
+
+.footer-content {
+    text-align: center;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    margin-bottom: 32px;
+    flex-wrap: wrap;
+}
+
+.footer-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #f5f5f7;
+    text-decoration: none;
+    font-size: 14px;
+    transition: opacity 0.2s ease;
+}
+
+.footer-link:hover {
+    opacity: 0.7;
+}
+
+.footer-logo {
+    width: 20px;
+    height: 20px;
+}
+
+.footer-logo.github-logo {
+    fill: #f5f5f7;
+}
+
+.footer-copyright {
+    font-size: 12px;
+    color: #86868b;
+    line-height: 1.8;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero {
+        padding: 60px 0 40px;
+    }
+
+    .hero-title {
+        font-size: 32px;
+    }
+
+    .hero-subtitle {
+        font-size: 17px;
+    }
+
+    .section {
+        padding: 60px 0;
+    }
+
+    .section-title {
+        font-size: 24px;
+    }
+
+    .affiliates-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 32px;
+    }
+
+    .partners-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .committee-section {
+        padding: 60px 0;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 28px;
+    }
+
+    .affiliates-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .partners-grid {
+        grid-template-columns: 1fr;
+    }
+}
