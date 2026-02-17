@@ -74,8 +74,6 @@ class CommunityManager {
         this.socket.on('stop-typing', (data) => {
             this.hideTypingIndicator(data);
         });
-    }
-    }
 
         // Real-time message handlers
         this.socket.on('new-message', (message) => {
