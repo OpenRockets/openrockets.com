@@ -10,8 +10,17 @@
     
     <!-- Brand Portfolio Styles -->
     <link rel="stylesheet" href="styles/brand-portfolio.css">
+    
+    <!-- Three.js for 3D Background -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 </head>
 <body>
+    <!-- 3D Background Canvas -->
+    <canvas id="bg-canvas"></canvas>
+    
+    <!-- Vignette Overlay -->
+    <div class="vignette-overlay"></div>
+    
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
@@ -170,5 +179,85 @@
             </div>
         </div>
     </footer>
+    
+    <!-- Three.js 3D Background Script -->
+    <script>
+        // Three.js setup for animated cubes background
+        const canvas = document.getElementById('bg-canvas');
+        const scene = new THREE.Scene();
+        const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+        const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true });
+        
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+        
+        // Create cubes
+        const cubes = [];
+        const cubeCount = 30;
+        
+        for (let i = 0; i < cubeCount; i++) {
+            const size = Math.random() * 0.8 + 0.2;
+            const geometry = new THREE.BoxGeometry(size, size, size);
+            
+            // Randomly choose between black wireframe and white wireframe
+            const isWhite = Math.random() > 0.5;
+            const material = new THREE.MeshBasicMaterial({
+                color: isWhite ? 0xffffff : 0x1d1d1f,
+                wireframe: true,
+                transparent: true,
+                opacity: 0.15
+            });
+            
+            const cube = new THREE.Mesh(geometry, material);
+            
+            // Random positions spread across the scene
+            cube.position.x = (Math.random() - 0.5) * 20;
+            cube.position.y = (Math.random() - 0.5) * 20;
+            cube.position.z = (Math.random() - 0.5) * 15 - 5;
+            
+            // Random rotation speeds
+            cube.userData = {
+                rotationSpeedX: (Math.random() - 0.5) * 0.01,
+                rotationSpeedY: (Math.random() - 0.5) * 0.01,
+                rotationSpeedZ: (Math.random() - 0.5) * 0.005,
+                floatAmplitude: Math.random() * 0.5 + 0.2,
+                floatSpeed: Math.random() * 0.5 + 0.3,
+                floatOffset: Math.random() * Math.PI * 2,
+                initialY: cube.position.y
+            };
+            
+            scene.add(cube);
+            cubes.push(cube);
+        }
+        
+        camera.position.z = 5;
+        
+        // Animation loop
+        let time = 0;
+        function animate() {
+            requestAnimationFrame(animate);
+            time += 0.01;
+            
+            cubes.forEach(cube => {
+                cube.rotation.x += cube.userData.rotationSpeedX;
+                cube.rotation.y += cube.userData.rotationSpeedY;
+                cube.rotation.z += cube.userData.rotationSpeedZ;
+                
+                // Gentle floating motion - oscillate around initial position
+                cube.position.y = cube.userData.initialY + Math.sin(time * cube.userData.floatSpeed + cube.userData.floatOffset) * cube.userData.floatAmplitude;
+            });
+            
+            renderer.render(scene, camera);
+        }
+        
+        animate();
+        
+        // Handle window resize
+        window.addEventListener('resize', () => {
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+        });
+    </script>
 </body>
 </html>
