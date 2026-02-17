@@ -24,11 +24,11 @@ document.addEventListener('DOMContentLoaded', function() {
     const closeEventModal = document.getElementById('closeEventModal');
     const eventForm = document.getElementById('eventForm');
     
-    // Sample events data - using relative dates from today
-    const today = new Date();
+    // Sample events data - using relative dates from the current date
+    const baseDate = new Date();
     const getDateOffset = (daysOffset) => {
-        const date = new Date(today);
-        date.setDate(today.getDate() + daysOffset);
+        const date = new Date(baseDate);
+        date.setDate(baseDate.getDate() + daysOffset);
         return date;
     };
     

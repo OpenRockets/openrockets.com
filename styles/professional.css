@@ -128,7 +128,7 @@ a:hover {
 .nav-logo img {
     height: 40px;
     width: auto;
-    filter: invert(1) brightness(0.2);
+    filter: invert(1) brightness(0.3);
 }
 
 .nav-links {
@@ -308,7 +308,8 @@ a:hover {
     width: 100%;
     border-radius: var(--border-radius);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    filter: invert(1) brightness(0.2);
+    /* Invert white logo to dark for visibility on light background */
+    filter: invert(1) brightness(0.3);
     background: var(--neutral-white);
     padding: 1rem;
 }
