@@ -3,261 +3,357 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OpenRockets Foundation - Nonprofit Organization</title>
-    <meta name="description" content="OpenRockets Foundation is a registered 501(c)(3) nonprofit organization advancing open source software, education, and innovation.">
+    <title>OpenRockets Foundation — Open Source, Education &amp; Innovation</title>
+    <meta name="description" content="OpenRockets Foundation is a 501(c)(3) registered nonprofit — an umbrella for student-led open source, education, and innovation projects worldwide.">
     <meta name="author" content="OpenRockets Foundation">
+    <meta property="og:title" content="OpenRockets Foundation">
+    <meta property="og:description" content="A 501(c)(3) nonprofit umbrella for open source, education, and innovation.">
     <link rel="icon" type="image/png" href="i/assets/static/openthread_logo_bash-trans-removebg-preview (1).png">
-    
-    <!-- Brand Portfolio Styles -->
-    <link rel="stylesheet" href="styles/brand-portfolio.css">
-    
-    <!-- Three.js for 3D Background -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
-    <!-- 3D Background Canvas -->
-    <canvas id="bg-canvas"></canvas>
-    
-    <!-- Vignette Overlay -->
-    <div class="vignette-overlay"></div>
-    
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container">
-            <img src="v/openrockets.png" alt="OpenRockets Foundation" class="hero-logo hero-logo-large">
-            <p class="hero-subtitle">A registered 501(c)(3) nonprofit organization advancing open source software, education, and innovation.</p>
-            <a href="join.html" class="join-link">Join Us</a>
-        </div>
-    </section>
 
-    <!-- Affiliate Nonprofits Section -->
-    <section class="section" id="affiliates">
-        <div class="container">
-            <h2 class="section-title">Our Nonprofits</h2>
-            <p class="section-subtitle">Organizations under the OpenRockets Foundation</p>
-            
-            <div class="affiliates-grid">
-                <a href="https://mag.openrockets.com" target="_blank" class="affiliate-item">
-                    <img src="https://mag.openrockets.com/assets/images/openrockets-magazine-logo.png" alt="OpenRockets Magazine" class="affiliate-logo">
-                    <p class="affiliate-name">OpenRockets Magazine</p>
-                    <p class="affiliate-url">mag.openrockets.com</p>
-                </a>
-                
-                <a href="https://openthreads.dev" target="_blank" class="affiliate-item">
-                    <img src="https://nekshadesilva.github.io/openthread/assets/openthread_logo_bash-trans.png" alt="OpenThreads" class="affiliate-logo" style="filter: invert(1);">
-                    <p class="affiliate-name">OpenThreads</p>
-                    <p class="affiliate-url">openthreads.dev</p>
-                </a>
-                
-                <a href="https://opensocial.online" target="_blank" class="affiliate-item">
-                    <div class="affiliate-logo-text">OS</div>
-                    <p class="affiliate-name">OpenSocial</p>
-                    <p class="affiliate-url">opensocial.online</p>
-                </a>
-                
-                <a href="https://marspreneurs.com" target="_blank" class="affiliate-item">
-                    <img src="https://marspreneurs.com/images/183/19931418/marspreneaurs-logo-6tEV8rgYQTRGvibXWP88Vg.png" alt="MarsPreneurs" class="affiliate-logo">
-                    <p class="affiliate-name">MarsPreneurs</p>
-                    <p class="affiliate-url">marspreneurs.com</p>
-                </a>
-                
-                <a href="https://github.com/openrockets-india" target="_blank" class="affiliate-item">
-                    <img src="https://github.com/openrockets-india.png" alt="OpenRockets India" class="affiliate-logo">
-                    <p class="affiliate-name">OpenRockets India</p>
-                    <p class="affiliate-url">github.com/openrockets-india</p>
-                </a>
+    <!-- ─────────────────────────────────────────
+         Navigation — black bar, logo only
+    ───────────────────────────────────────── -->
+    <nav class="navbar">
+        <div class="nav-inner">
+            <a href="/" class="nav-brand" aria-label="OpenRockets Foundation">
+                <!-- Logo is white; renders perfectly on the black nav — no filter needed -->
+                <img src="v/openrockets.png" alt="OpenRockets Foundation" class="nav-logo">
+            </a>
+            <div class="nav-links">
+                <a href="#about"      class="nav-link">About</a>
+                <a href="#nonprofits" class="nav-link">Nonprofits</a>
+                <a href="#pioneers"   class="nav-link">Pioneers</a>
+                <a href="#committee"  class="nav-link">Committee</a>
+                <a href="join.html"   class="nav-link nav-join">Join Us</a>
             </div>
         </div>
-    </section>
+    </nav>
 
-    <!-- Partner Nonprofits Section -->
-    <section class="section" id="partners">
+    <!-- ─────────────────────────────────────────
+         About / Hero
+    ───────────────────────────────────────── -->
+    <section id="about" class="about-section">
         <div class="container">
-            <h2 class="section-title">Our Partners</h2>
-            <p class="section-subtitle">Organizations we proudly partner with</p>
-            
-            <div class="partners-grid">
-                <a href="https://thebulleteen.com" target="_blank" class="partner-item">
-                    <img src="https://thebulleteen.com/wp-content/uploads/2024/09/cropped-cropped-Logo-1-removebg-preview-300x214.png" alt="TheBulleTeen" class="partner-logo">
-                    <p class="partner-name">TheBulleTeen</p>
-                </a>
-                
-                <a href="https://hackclub.com" target="_blank" class="partner-item">
-                    <img src="https://assets.hackclub.com/flag-orpheus-left.png" alt="Hack Club" class="partner-logo">
-                    <p class="partner-name">Hack Club</p>
-                </a>
-            </div>
-        </div>
-    </section>
+            <div class="about-body">
 
-    <!-- Pioneers PDF Section -->
-    <section class="section" id="pioneers">
-        <div class="container">
-            <h2 class="section-title">The Pioneers</h2>
-            <p class="section-subtitle">Learn about our founding story</p>
-            <div class="pdf-container">
-                <iframe src="i/assets/OpenRockets-The-PIONEERS.pdf" class="pdf-iframe" title="OpenRockets - The Pioneers"></iframe>
-            </div>
-        </div>
-    </section>
+                <div class="about-text">
+                    <h1 class="org-name">OpenRockets Foundation</h1>
+                    <p class="org-tagline">
+                        An umbrella nonprofit powering student-led initiatives in open source software,
+                        education, and digital innovation — operating globally from Colombo, Sri Lanka.
+                    </p>
 
-    <!-- Committee Section -->
-    <section class="committee-section" id="committee">
-        <div class="container">
-            <h2 class="section-title">Committee</h2>
-            <p class="section-subtitle">Leadership across the years</p>
-            
-            <div class="committee-year">
-                <h3 class="committee-year-title">2026</h3>
-                <div class="committee-members">
-                    <span class="committee-member">Vinuk Gamaarachige (Executive Director)</span>
-                    <span class="committee-member">Thisal Nethnidu (Technical Host)</span>
-                    <span class="committee-member">Navindu Jayawardene (Director of Operations)</span>
-                    <span class="committee-member">M. Wickramasinghe (Financials)</span>
+                    <div class="org-meta">
+                        <div class="meta-row">
+                            <span class="meta-label">Legal Status</span>
+                            <span class="meta-value">501(c)(3) Registered Nonprofit &nbsp;·&nbsp; United States of America</span>
+                        </div>
+                        <div class="meta-row">
+                            <span class="meta-label">Fiscal Sponsor</span>
+                            <span class="meta-value">The Hack Foundation</span>
+                        </div>
+                        <div class="meta-row">
+                            <span class="meta-label">Network</span>
+                            <span class="meta-value">National Network of Fiscal Sponsors</span>
+                        </div>
+                        <div class="meta-row">
+                            <span class="meta-label">Partner</span>
+                            <span class="meta-value">Dialog Enterprise, Sri Lanka</span>
+                        </div>
+                    </div>
+
+                    <a href="join.html" class="btn-primary">Apply to Join &rarr;</a>
                 </div>
-            </div>
-            
-            <div class="committee-year">
-                <h3 class="committee-year-title">2025</h3>
-                <div class="committee-members">
-                    <span class="committee-member">Neksha DeSilva (Executive Director)</span>
-                    <span class="committee-member">Chethina Rnadidu (Lead Contributor)</span>
-                    <span class="committee-member">Navindu Jayawardene (Lead Contributor)</span>
-                    <span class="committee-member">Vidul Batawala (Lead Contributor)</span>
-                    <span class="committee-member">Menula de Silva (Lead Contributor)</span>
+
+                <div class="about-logo-wrap">
+                    <!-- White logo on white background — inverted via CSS to appear dark -->
+                    <img src="v/openrockets.png" alt="OpenRockets" class="about-logo">
                 </div>
-            </div>
-            
-            <div class="committee-year">
-                <h3 class="committee-year-title">2024</h3>
-                <div class="committee-members">
-                    <span class="committee-member">Neksha DeSilva (Founder)</span>
-                </div>
+
             </div>
         </div>
     </section>
 
-    <!-- Sponsors Section -->
-    <section class="sponsors-section">
+    <!-- ─────────────────────────────────────────
+         Our Nonprofits
+    ───────────────────────────────────────── -->
+    <section id="nonprofits" class="section">
         <div class="container">
-            <p class="sponsors-text">
-                <strong>Registered nonprofit</strong> in the United States of America<br>
-                <strong>Fiscally sponsored</strong> by the Hack Foundation<br>
-                <strong>Supported by</strong> the National Network of Fiscal Sponsors<br>
-                <strong>Partner:</strong> Dialog Enterprise, Sri Lanka
-            </p>
+            <div class="section-header">
+                <h2>Our Nonprofits</h2>
+                <p>Independent projects operating under the OpenRockets Foundation umbrella</p>
+            </div>
+
+            <div class="nonprofits-list">
+
+                <a href="https://mag.openrockets.com" target="_blank" rel="noopener" class="np-item">
+                    <img src="https://mag.openrockets.com/assets/images/openrockets-magazine-logo.png"
+                         alt="OpenRockets Magazine" class="np-logo">
+                    <div class="np-info">
+                        <span class="np-name">OpenRockets Magazine</span>
+                        <span class="np-url">mag.openrockets.com</span>
+                    </div>
+                    <span class="np-arrow">&rarr;</span>
+                </a>
+
+                <a href="https://openthreads.dev" target="_blank" rel="noopener" class="np-item">
+                    <img src="https://nekshadesilva.github.io/openthread/assets/openthread_logo_bash-trans.png"
+                         alt="OpenThreads" class="np-logo np-logo-invert">
+                    <div class="np-info">
+                        <span class="np-name">OpenThreads</span>
+                        <span class="np-url">openthreads.dev</span>
+                    </div>
+                    <span class="np-arrow">&rarr;</span>
+                </a>
+
+                <a href="https://opensocial.online" target="_blank" rel="noopener" class="np-item">
+                    <div class="np-logo-text">OS</div>
+                    <div class="np-info">
+                        <span class="np-name">OpenSocial</span>
+                        <span class="np-url">opensocial.online</span>
+                    </div>
+                    <span class="np-arrow">&rarr;</span>
+                </a>
+
+                <a href="https://marspreneurs.com" target="_blank" rel="noopener" class="np-item">
+                    <img src="https://marspreneurs.com/images/183/19931418/marspreneaurs-logo-6tEV8rgYQTRGvibXWP88Vg.png"
+                         alt="MarsPreneurs" class="np-logo">
+                    <div class="np-info">
+                        <span class="np-name">MarsPreneurs</span>
+                        <span class="np-url">marspreneurs.com</span>
+                    </div>
+                    <span class="np-arrow">&rarr;</span>
+                </a>
+
+                <a href="https://github.com/openrockets-india" target="_blank" rel="noopener" class="np-item">
+                    <img src="https://github.com/openrockets-india.png"
+                         alt="OpenRockets India" class="np-logo">
+                    <div class="np-info">
+                        <span class="np-name">OpenRockets India</span>
+                        <span class="np-url">github.com/openrockets-india</span>
+                    </div>
+                    <span class="np-arrow">&rarr;</span>
+                </a>
+
+            </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
+    <!-- ─────────────────────────────────────────
+         Partners
+    ───────────────────────────────────────── -->
+    <section id="partners" class="section">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-links">
-                    <a href="https://github.com/OpenRockets" target="_blank" class="footer-link">
-                        <svg class="footer-logo github-logo" viewBox="0 0 16 16" fill="currentColor">
-                            <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
-                        </svg>
-                        <span>GitHub</span>
-                    </a>
-                    <a href="https://x.com/OpenRockets" target="_blank" class="footer-link">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                            <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"/>
-                        </svg>
-                        <span>X (Twitter)</span>
-                    </a>
-                    <a href="https://nekshadesilva.github.io/openthread/" target="_blank" class="footer-link">
-                        <img src="https://nekshadesilva.github.io/openthread/assets/openthread_logo_bash-trans.png" alt="OpenThreads" class="footer-logo">
-                        <span>OpenThreads</span>
-                    </a>
-                </div>
-                <p class="footer-copyright">
-                    &copy; 2025 OpenRockets Foundation<br>
-                    A 501(c)(3) registered nonprofit in the United States of America<br>
-                    Operated in Colombo, Sri Lanka
+            <div class="section-header">
+                <h2>Partners</h2>
+                <p>Organizations we proudly work alongside</p>
+            </div>
+
+            <div class="partners-row">
+                <a href="https://thebulleteen.com" target="_blank" rel="noopener" class="partner-item">
+                    <img src="https://thebulleteen.com/wp-content/uploads/2024/09/cropped-cropped-Logo-1-removebg-preview-300x214.png"
+                         alt="TheBulleTeen" class="partner-logo">
+                    <span>TheBulleTeen</span>
+                </a>
+                <a href="https://hackclub.com" target="_blank" rel="noopener" class="partner-item">
+                    <img src="https://assets.hackclub.com/flag-orpheus-left.png"
+                         alt="Hack Club" class="partner-logo">
+                    <span>Hack Club</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ─────────────────────────────────────────
+         The Pioneers PDF
+    ───────────────────────────────────────── -->
+    <section id="pioneers" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>The Pioneers</h2>
+                <p>Read the founding document — the story of how this all started</p>
+            </div>
+            <div class="pdf-wrap">
+                <iframe
+                    src="i/assets/OpenRockets-The-PIONEERS.pdf"
+                    title="OpenRockets — The Pioneers"
+                    class="pdf-frame">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- ─────────────────────────────────────────
+         Founding Story
+    ───────────────────────────────────────── -->
+    <section id="story" class="section story-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Founding Story</h2>
+            </div>
+            <div class="story-body">
+                <p class="story-pull">
+                    We believe the next generation of the internet will be built by teenagers.
+                    We&rsquo;re giving them the scaffolding to do it.
+                </p>
+                <p>
+                    OpenRockets was founded in 2024 by Neksha DeSilva as a space where young builders,
+                    writers, and thinkers could contribute to real-world open source projects &mdash;
+                    without gatekeeping, without bureaucracy, and without waiting to be &ldquo;old enough.&rdquo;
+                </p>
+                <p>
+                    What started as a single initiative quickly expanded into a network of nonprofits,
+                    each tackling a different corner of the open internet: a magazine, a social network,
+                    a developer community, and more.
+                </p>
+                <p>
+                    Operating from Colombo, Sri Lanka, and recognized in the United States as a
+                    501(c)(3) organization, OpenRockets Foundation serves as the legal and operational
+                    home for these projects &mdash; providing infrastructure, fiscal access, and community.
                 </p>
             </div>
         </div>
+    </section>
+
+    <!-- ─────────────────────────────────────────
+         Committee
+    ───────────────────────────────────────── -->
+    <section id="committee" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Committee</h2>
+                <p>Leadership across the years</p>
+            </div>
+
+            <div class="committee-table">
+
+                <div class="committee-year-block">
+                    <div class="cy-label">2026</div>
+                    <div class="cy-members">
+                        <div class="cy-member">
+                            <span class="cy-name">Vinuk Gamaarachige</span>
+                            <span class="cy-role">Executive Director</span>
+                        </div>
+                        <div class="cy-member">
+                            <span class="cy-name">Thisal Nethnidu</span>
+                            <span class="cy-role">Technical Host</span>
+                        </div>
+                        <div class="cy-member">
+                            <span class="cy-name">Navindu Jayawardene</span>
+                            <span class="cy-role">Director of Operations</span>
+                        </div>
+                        <div class="cy-member">
+                            <span class="cy-name">M. Wickramasinghe</span>
+                            <span class="cy-role">Financials</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="committee-year-block">
+                    <div class="cy-label">2025</div>
+                    <div class="cy-members">
+                        <div class="cy-member">
+                            <span class="cy-name">Neksha DeSilva</span>
+                            <span class="cy-role">Executive Director</span>
+                        </div>
+                        <div class="cy-member">
+                            <span class="cy-name">Chethina Rnadidu</span>
+                            <span class="cy-role">Lead Contributor</span>
+                        </div>
+                        <div class="cy-member">
+                            <span class="cy-name">Navindu Jayawardene</span>
+                            <span class="cy-role">Lead Contributor</span>
+                        </div>
+                        <div class="cy-member">
+                            <span class="cy-name">Vidul Batawala</span>
+                            <span class="cy-role">Lead Contributor</span>
+                        </div>
+                        <div class="cy-member">
+                            <span class="cy-name">Menula de Silva</span>
+                            <span class="cy-role">Lead Contributor</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="committee-year-block">
+                    <div class="cy-label">2024</div>
+                    <div class="cy-members">
+                        <div class="cy-member">
+                            <span class="cy-name">Neksha DeSilva</span>
+                            <span class="cy-role">Founder</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ─────────────────────────────────────────
+         Footer
+    ───────────────────────────────────────── -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-row">
+
+                <div class="footer-links">
+                    <a href="https://github.com/OpenRockets" target="_blank" rel="noopener" class="footer-link">
+                        <svg class="footer-link-icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+                            <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38
+                            0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13
+                            -.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66
+                            .07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15
+                            -.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0
+                            1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82
+                            1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01
+                            1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
+                        </svg>
+                        GitHub
+                    </a>
+
+                    <a href="https://x.com/OpenRockets" target="_blank" rel="noopener" class="footer-link">
+                        <svg class="footer-link-icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+                            <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425
+                            5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86
+                            13.028h1.36L4.323 2.145H2.865z"/>
+                        </svg>
+                        X (Twitter)
+                    </a>
+
+                    <a href="https://openthreads.dev" target="_blank" rel="noopener" class="footer-link">
+                        <img src="https://nekshadesilva.github.io/openthread/assets/openthread_logo_bash-trans.png"
+                             alt="" class="footer-link-icon footer-ot-icon">
+                        OpenThreads
+                    </a>
+                </div>
+
+                <p class="footer-copy">
+                    &copy; 2025 OpenRockets Foundation &nbsp;&middot;&nbsp;
+                    501(c)(3) Registered Nonprofit, United States of America<br>
+                    Operated in Colombo, Sri Lanka
+                </p>
+
+            </div>
+        </div>
     </footer>
-    
-    <!-- Three.js 3D Background Script -->
-    <script>
-        // Three.js setup for animated cubes background
-        const canvas = document.getElementById('bg-canvas');
-        const scene = new THREE.Scene();
-        const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-        const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true });
-        
-        renderer.setSize(window.innerWidth, window.innerHeight);
-        renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-        
-        // Create cubes
-        const cubes = [];
-        const cubeCount = 30;
-        
-        for (let i = 0; i < cubeCount; i++) {
-            const size = Math.random() * 0.8 + 0.2;
-            const geometry = new THREE.BoxGeometry(size, size, size);
-            
-            // Randomly choose between black wireframe and white wireframe
-            const isWhite = Math.random() > 0.5;
-            const material = new THREE.MeshBasicMaterial({
-                color: isWhite ? 0xffffff : 0x1d1d1f,
-                wireframe: true,
-                transparent: true,
-                opacity: 0.15
-            });
-            
-            const cube = new THREE.Mesh(geometry, material);
-            
-            // Random positions spread across the scene
-            cube.position.x = (Math.random() - 0.5) * 20;
-            cube.position.y = (Math.random() - 0.5) * 20;
-            cube.position.z = (Math.random() - 0.5) * 15 - 5;
-            
-            // Random rotation speeds
-            cube.userData = {
-                rotationSpeedX: (Math.random() - 0.5) * 0.01,
-                rotationSpeedY: (Math.random() - 0.5) * 0.01,
-                rotationSpeedZ: (Math.random() - 0.5) * 0.005,
-                floatAmplitude: Math.random() * 0.5 + 0.2,
-                floatSpeed: Math.random() * 0.5 + 0.3,
-                floatOffset: Math.random() * Math.PI * 2,
-                initialY: cube.position.y
-            };
-            
-            scene.add(cube);
-            cubes.push(cube);
-        }
-        
-        camera.position.z = 5;
-        
-        // Animation loop
-        let time = 0;
-        function animate() {
-            requestAnimationFrame(animate);
-            time += 0.01;
-            
-            cubes.forEach(cube => {
-                cube.rotation.x += cube.userData.rotationSpeedX;
-                cube.rotation.y += cube.userData.rotationSpeedY;
-                cube.rotation.z += cube.userData.rotationSpeedZ;
-                
-                // Gentle floating motion - oscillate around initial position
-                cube.position.y = cube.userData.initialY + Math.sin(time * cube.userData.floatSpeed + cube.userData.floatOffset) * cube.userData.floatAmplitude;
-            });
-            
-            renderer.render(scene, camera);
-        }
-        
-        animate();
-        
-        // Handle window resize
-        window.addEventListener('resize', () => {
-            camera.aspect = window.innerWidth / window.innerHeight;
-            camera.updateProjectionMatrix();
-            renderer.setSize(window.innerWidth, window.innerHeight);
-        });
-    </script>
+
+    <!-- ─────────────────────────────────────────
+         Status Bar — fixed bottom, Vercel-style
+    ───────────────────────────────────────── -->
+    <div class="status-bar" role="status" aria-live="polite">
+        <div class="status-inner">
+            <span class="status-indicator">
+                <span class="status-dot"></span>
+                All Systems Operational
+            </span>
+            <a href="https://status.openrockets.com" target="_blank" rel="noopener" class="status-link">
+                status.openrockets.com &rarr;
+            </a>
+        </div>
+    </div>
+
 </body>
 </html>

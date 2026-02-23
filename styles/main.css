@@ -1,0 +1,547 @@
+/* OpenRockets Foundation — Main Stylesheet */
+/* Inspired by YC/HN: clean, dense, information-first */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap');
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --black:   #0a0a0a;
+    --white:   #ffffff;
+    --gray-50: #f9f9f9;
+    --gray-100:#f2f2f2;
+    --gray-200:#e4e4e4;
+    --text:    #111111;
+    --muted:   #666666;
+    --light:   #999999;
+    --border:  #e2e2e2;
+    --green:   #22c55e;
+    --font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+    font-family: var(--font);
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--text);
+    background: var(--white);
+    -webkit-font-smoothing: antialiased;
+    padding-bottom: 38px; /* leave room for fixed status bar */
+}
+
+a { color: inherit; text-decoration: none; }
+
+/* ────────────────────────────────────────
+   Container
+──────────────────────────────────────── */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 28px;
+}
+
+/* ────────────────────────────────────────
+   Navbar — black, sticky
+──────────────────────────────────────── */
+.navbar {
+    background: var(--black);
+    border-bottom: 1px solid #1c1c1c;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-inner {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 28px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-brand { display: flex; align-items: center; }
+
+.nav-logo {
+    height: 26px;
+    width: auto;
+    display: block;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+.nav-link {
+    color: rgba(255,255,255,0.65);
+    font-size: 13px;
+    font-weight: 400;
+    transition: color 0.15s;
+}
+
+.nav-link:hover { color: #fff; }
+
+.nav-join {
+    color: #fff;
+    font-weight: 500;
+    border: 1px solid rgba(255,255,255,0.22);
+    padding: 5px 13px;
+    border-radius: 3px;
+    transition: border-color 0.15s, background 0.15s;
+}
+
+.nav-join:hover {
+    border-color: rgba(255,255,255,0.55);
+    background: rgba(255,255,255,0.06);
+}
+
+/* ────────────────────────────────────────
+   About / Hero Section
+──────────────────────────────────────── */
+.about-section {
+    padding: 68px 0 60px;
+    border-bottom: 1px solid var(--border);
+}
+
+.about-body {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 56px;
+}
+
+.about-text { flex: 1; }
+
+.org-name {
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: -0.4px;
+    color: var(--text);
+    margin-bottom: 10px;
+}
+
+.org-tagline {
+    font-size: 15px;
+    color: var(--muted);
+    line-height: 1.7;
+    max-width: 500px;
+    margin-bottom: 28px;
+}
+
+.org-meta {
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    padding: 14px 0;
+    margin-bottom: 28px;
+}
+
+.meta-row {
+    display: flex;
+    gap: 0;
+    padding: 4px 0;
+    font-size: 13px;
+}
+
+.meta-label {
+    color: var(--muted);
+    min-width: 130px;
+    font-weight: 500;
+    flex-shrink: 0;
+}
+
+.meta-value { color: var(--text); }
+
+.btn-primary {
+    display: inline-block;
+    background: var(--text);
+    color: var(--white);
+    font-size: 13px;
+    font-weight: 500;
+    padding: 8px 18px;
+    border-radius: 3px;
+    transition: opacity 0.15s;
+}
+
+.btn-primary:hover { opacity: 0.78; }
+
+.about-logo-wrap { flex-shrink: 0; }
+
+.about-logo {
+    width: 130px;
+    height: auto;
+    filter: invert(1);
+    opacity: 0.82;
+    display: block;
+}
+
+/* ────────────────────────────────────────
+   Sections — shared
+──────────────────────────────────────── */
+.section {
+    padding: 52px 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.section-header { margin-bottom: 28px; }
+
+.section-header h2 {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--text);
+    letter-spacing: -0.2px;
+    margin-bottom: 3px;
+}
+
+.section-header p {
+    font-size: 13px;
+    color: var(--muted);
+}
+
+/* ────────────────────────────────────────
+   Nonprofits — list style
+──────────────────────────────────────── */
+.nonprofits-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.np-item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 13px 0;
+    border-bottom: 1px solid var(--border);
+    text-decoration: none;
+    color: var(--text);
+    transition: background 0.1s;
+}
+
+.np-item:last-child { border-bottom: none; }
+.np-item:hover .np-name { text-decoration: underline; }
+
+.np-logo {
+    width: 38px;
+    height: 38px;
+    object-fit: contain;
+    border-radius: 6px;
+    flex-shrink: 0;
+    border: 1px solid var(--border);
+    background: var(--gray-50);
+    padding: 3px;
+}
+
+.np-logo-invert {
+    filter: invert(1);
+    background: var(--black);
+    border-color: #2a2a2a;
+    padding: 4px;
+}
+
+.np-logo-text {
+    width: 38px;
+    height: 38px;
+    background: var(--black);
+    color: var(--white);
+    font-size: 11px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    flex-shrink: 0;
+    letter-spacing: 0.5px;
+}
+
+.np-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.np-name {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text);
+}
+
+.np-url {
+    font-size: 12px;
+    color: var(--muted);
+}
+
+.np-arrow {
+    font-size: 14px;
+    color: var(--light);
+}
+
+/* ────────────────────────────────────────
+   Partners
+──────────────────────────────────────── */
+.partners-row {
+    display: flex;
+    gap: 28px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.partner-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    font-weight: 500;
+    transition: opacity 0.15s;
+    border: 1px solid var(--border);
+    padding: 10px 16px;
+    border-radius: 4px;
+}
+
+.partner-item:hover { opacity: 0.65; }
+
+.partner-logo {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+}
+
+/* ────────────────────────────────────────
+   PDF Embed
+──────────────────────────────────────── */
+.pdf-wrap { width: 100%; }
+
+.pdf-frame {
+    width: 100%;
+    height: 660px;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    display: block;
+    background: var(--gray-50);
+}
+
+/* ────────────────────────────────────────
+   Founding Story
+──────────────────────────────────────── */
+.story-section { background: var(--gray-50); }
+
+.story-body {
+    max-width: 640px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.story-body p {
+    font-size: 14px;
+    line-height: 1.8;
+    color: #333;
+}
+
+.story-body .story-pull {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--text);
+    border-left: 2px solid var(--text);
+    padding-left: 14px;
+    line-height: 1.6;
+}
+
+/* ────────────────────────────────────────
+   Committee
+──────────────────────────────────────── */
+.committee-table {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+.committee-year-block {
+    display: flex;
+    gap: 36px;
+    align-items: flex-start;
+    padding-bottom: 24px;
+    border-bottom: 1px solid var(--border);
+}
+
+.committee-year-block:last-child { border-bottom: none; padding-bottom: 0; }
+
+.cy-label {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--muted);
+    min-width: 44px;
+    padding-top: 2px;
+    letter-spacing: 0.5px;
+}
+
+.cy-members {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    flex: 1;
+}
+
+.cy-member {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    font-size: 14px;
+}
+
+.cy-name { color: var(--text); font-weight: 500; }
+.cy-role { color: var(--muted); font-size: 12px; }
+
+/* ────────────────────────────────────────
+   Footer
+──────────────────────────────────────── */
+.footer {
+    background: var(--black);
+    padding: 32px 0 28px;
+}
+
+.footer-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-links {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.footer-link {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: rgba(255,255,255,0.6);
+    font-size: 13px;
+    transition: color 0.15s;
+}
+
+.footer-link:hover { color: #fff; }
+
+.footer-link-icon {
+    width: 14px;
+    height: 14px;
+    flex-shrink: 0;
+}
+
+.footer-ot-icon {
+    filter: invert(1);
+    opacity: 0.6;
+}
+
+.footer-copy {
+    font-size: 11px;
+    color: rgba(255,255,255,0.28);
+    line-height: 1.7;
+}
+
+/* ────────────────────────────────────────
+   Status Bar — fixed bottom, Vercel-style
+──────────────────────────────────────── */
+.status-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 36px;
+    background: #0a0a0a;
+    border-top: 1px solid #1e1e1e;
+    z-index: 200;
+}
+
+.status-inner {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 28px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.status-indicator {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    font-size: 12px;
+    color: rgba(255,255,255,0.65);
+    font-weight: 400;
+}
+
+.status-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--green);
+    box-shadow: 0 0 7px #22c55e90;
+    flex-shrink: 0;
+    animation: pulse 2.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { box-shadow: 0 0 5px #22c55e70; }
+    50%       { box-shadow: 0 0 12px #22c55ecc; }
+}
+
+.status-link {
+    font-size: 11px;
+    color: rgba(255,255,255,0.3);
+    transition: color 0.15s;
+}
+
+.status-link:hover { color: rgba(255,255,255,0.65); }
+
+/* ────────────────────────────────────────
+   Responsive
+──────────────────────────────────────── */
+@media (max-width: 700px) {
+    .about-body {
+        flex-direction: column;
+        gap: 32px;
+    }
+
+    .about-logo-wrap { display: none; }
+
+    .nav-links {
+        gap: 12px;
+    }
+
+    .nav-link:not(.nav-join) {
+        display: none;
+    }
+
+    .committee-year-block {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .footer-row {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .meta-row { flex-direction: column; gap: 1px; }
+    .meta-label { min-width: 0; }
+
+    .pdf-frame { height: 420px; }
+
+    .section { padding: 40px 0; }
+
+    .about-section { padding: 48px 0 40px; }
+}
