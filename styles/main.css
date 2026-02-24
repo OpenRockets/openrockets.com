@@ -1,7 +1,5 @@
 /* OpenRockets Foundation — Main Stylesheet */
-/* Inspired by YC/HN: clean, dense, information-first */
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
 *, *::before, *::after {
     box-sizing: border-box;
@@ -14,10 +12,9 @@
     --white:   #ffffff;
     --gray-50: #f9f9f9;
     --gray-100:#f2f2f2;
-    --gray-200:#e4e4e4;
     --text:    #111111;
     --muted:   #666666;
-    --light:   #999999;
+    --light:   #aaaaaa;
     --border:  #e2e2e2;
     --green:   #22c55e;
     --font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
@@ -32,169 +29,73 @@ body {
     color: var(--text);
     background: var(--white);
     -webkit-font-smoothing: antialiased;
-    padding-bottom: 38px; /* leave room for fixed status bar */
 }
 
 a { color: inherit; text-decoration: none; }
 
-/* ────────────────────────────────────────
-   Container
-──────────────────────────────────────── */
+/* ── Container ── */
 .container {
-    max-width: 900px;
+    max-width: 880px;
     margin: 0 auto;
     padding: 0 28px;
 }
 
-/* ────────────────────────────────────────
-   Navbar — black, sticky
-──────────────────────────────────────── */
-.navbar {
-    background: var(--black);
-    border-bottom: 1px solid #1c1c1c;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-}
-
-.nav-inner {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 0 28px;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.nav-brand { display: flex; align-items: center; }
-
-.nav-logo {
-    height: 26px;
-    width: auto;
-    display: block;
-}
-
-.nav-links {
-    display: flex;
-    align-items: center;
-    gap: 22px;
-}
-
-.nav-link {
-    color: rgba(255,255,255,0.65);
-    font-size: 13px;
-    font-weight: 400;
-    transition: color 0.15s;
-}
-
-.nav-link:hover { color: #fff; }
-
-.nav-join {
-    color: #fff;
-    font-weight: 500;
-    border: 1px solid rgba(255,255,255,0.22);
-    padding: 5px 13px;
-    border-radius: 3px;
-    transition: border-color 0.15s, background 0.15s;
-}
-
-.nav-join:hover {
-    border-color: rgba(255,255,255,0.55);
-    background: rgba(255,255,255,0.06);
-}
-
-/* ────────────────────────────────────────
-   About / Hero Section
-──────────────────────────────────────── */
-.about-section {
-    padding: 68px 0 60px;
+/* ── Hero Section ── */
+.hero-section {
+    padding: 80px 0 72px;
     border-bottom: 1px solid var(--border);
+
 }
 
-.about-body {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    gap: 56px;
+.hero-logo {
+    width: 190px;
+    height: auto;
+    /* logo is white — invert so it shows on white background */
+    filter: invert(1);
+    display: block;
+    
 }
 
-.about-text { flex: 1; }
-
-.org-name {
-    font-size: 26px;
-    font-weight: 700;
-    letter-spacing: -0.4px;
-    color: var(--text);
-    margin-bottom: 10px;
-}
-
-.org-tagline {
+.hero-pitch {
     font-size: 15px;
     color: var(--muted);
-    line-height: 1.7;
-    max-width: 500px;
-    margin-bottom: 28px;
+    max-width: 420px;
+ 
+    line-height: 1.75;
 }
 
-.org-meta {
-    border-top: 1px solid var(--border);
-    border-bottom: 1px solid var(--border);
-    padding: 14px 0;
-    margin-bottom: 28px;
-}
-
-.meta-row {
-    display: flex;
-    gap: 0;
-    padding: 4px 0;
+.hero-sub {
     font-size: 13px;
+    color: var(--light);
+    margin-bottom: 32px;
 }
 
-.meta-label {
-    color: var(--muted);
-    min-width: 130px;
-    font-weight: 500;
-    flex-shrink: 0;
-}
-
-.meta-value { color: var(--text); }
-
-.btn-primary {
+.btn-hero {
     display: inline-block;
-    background: var(--text);
+    background: var(--black);
     color: var(--white);
-    font-size: 13px;
-    font-weight: 500;
-    padding: 8px 18px;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 11px 26px;
     border-radius: 3px;
+    letter-spacing: -0.1px;
     transition: opacity 0.15s;
 }
 
-.btn-primary:hover { opacity: 0.78; }
+.btn-hero:hover { opacity: 0.72; }
 
-.about-logo-wrap { flex-shrink: 0; }
-
-.about-logo {
-    width: 130px;
-    height: auto;
-    filter: invert(1);
-    opacity: 0.82;
-    display: block;
-}
-
-/* ────────────────────────────────────────
-   Sections — shared
-──────────────────────────────────────── */
+/* ── Shared Section ── */
 .section {
     padding: 52px 0;
     border-bottom: 1px solid var(--border);
 }
 
-.section-header { margin-bottom: 28px; }
+.section-header {
+    margin-bottom: 26px;
+}
 
 .section-header h2 {
-    font-size: 18px;
+    font-size: 17px;
     font-weight: 600;
     color: var(--text);
     letter-spacing: -0.2px;
@@ -206,9 +107,7 @@ a { color: inherit; text-decoration: none; }
     color: var(--muted);
 }
 
-/* ────────────────────────────────────────
-   Nonprofits — list style
-──────────────────────────────────────── */
+/* ── Nonprofits — list rows ── */
 .nonprofits-list {
     display: flex;
     flex-direction: column;
@@ -222,7 +121,6 @@ a { color: inherit; text-decoration: none; }
     border-bottom: 1px solid var(--border);
     text-decoration: none;
     color: var(--text);
-    transition: background 0.1s;
 }
 
 .np-item:last-child { border-bottom: none; }
@@ -243,7 +141,7 @@ a { color: inherit; text-decoration: none; }
     filter: invert(1);
     background: var(--black);
     border-color: #2a2a2a;
-    padding: 4px;
+    padding: 5px;
 }
 
 .np-logo-text {
@@ -284,39 +182,46 @@ a { color: inherit; text-decoration: none; }
     color: var(--light);
 }
 
-/* ────────────────────────────────────────
-   Partners
-──────────────────────────────────────── */
-.partners-row {
-    display: flex;
-    gap: 28px;
-    flex-wrap: wrap;
-    align-items: center;
+/* ── Partners — card grid ── */
+.partners-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 16px;
 }
 
-.partner-item {
+.partner-card {
     display: flex;
+    flex-direction: column;
     align-items: center;
     gap: 10px;
-    font-size: 14px;
-    font-weight: 500;
-    transition: opacity 0.15s;
+    padding: 20px 16px;
     border: 1px solid var(--border);
-    padding: 10px 16px;
     border-radius: 4px;
+    text-align: center;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text);
+    transition: border-color 0.15s;
+    text-decoration: none;
 }
 
-.partner-item:hover { opacity: 0.65; }
+.partner-card:hover {
+    border-color: #aaa;
+}
 
 .partner-logo {
-    width: 28px;
-    height: 28px;
+    width: 52px;
+    height: 52px;
     object-fit: contain;
 }
 
-/* ────────────────────────────────────────
-   PDF Embed
-──────────────────────────────────────── */
+.partner-tag {
+    font-size: 11px;
+    color: var(--muted);
+    font-weight: 400;
+}
+
+/* ── PDF ── */
 .pdf-wrap { width: 100%; }
 
 .pdf-frame {
@@ -328,36 +233,7 @@ a { color: inherit; text-decoration: none; }
     background: var(--gray-50);
 }
 
-/* ────────────────────────────────────────
-   Founding Story
-──────────────────────────────────────── */
-.story-section { background: var(--gray-50); }
-
-.story-body {
-    max-width: 640px;
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-}
-
-.story-body p {
-    font-size: 14px;
-    line-height: 1.8;
-    color: #333;
-}
-
-.story-body .story-pull {
-    font-size: 16px;
-    font-weight: 500;
-    color: var(--text);
-    border-left: 2px solid var(--text);
-    padding-left: 14px;
-    line-height: 1.6;
-}
-
-/* ────────────────────────────────────────
-   Committee
-──────────────────────────────────────── */
+/* ── Committee ── */
 .committee-table {
     display: flex;
     flex-direction: column;
@@ -372,7 +248,10 @@ a { color: inherit; text-decoration: none; }
     border-bottom: 1px solid var(--border);
 }
 
-.committee-year-block:last-child { border-bottom: none; padding-bottom: 0; }
+.committee-year-block:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
 
 .cy-label {
     font-size: 13px;
@@ -397,23 +276,23 @@ a { color: inherit; text-decoration: none; }
     font-size: 14px;
 }
 
-.cy-name { color: var(--text); font-weight: 500; }
-.cy-role { color: var(--muted); font-size: 12px; }
+.cy-name  { color: var(--text); font-weight: 500; }
+.cy-role  { color: var(--muted); font-size: 12px; }
 
-/* ────────────────────────────────────────
-   Footer
-──────────────────────────────────────── */
+/* ── Footer ── */
 .footer {
     background: var(--black);
-    padding: 32px 0 28px;
+    padding: 32px 0 0;
 }
 
-.footer-row {
+.footer-top {
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 20px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid #1e1e1e;
 }
 
 .footer-links {
@@ -427,7 +306,7 @@ a { color: inherit; text-decoration: none; }
     display: flex;
     align-items: center;
     gap: 6px;
-    color: rgba(255,255,255,0.6);
+    color: rgba(255,255,255,0.55);
     font-size: 13px;
     transition: color 0.15s;
 }
@@ -442,34 +321,53 @@ a { color: inherit; text-decoration: none; }
 
 .footer-ot-icon {
     filter: invert(1);
-    opacity: 0.6;
+    opacity: 0.55;
 }
 
 .footer-copy {
     font-size: 11px;
-    color: rgba(255,255,255,0.28);
+    color: rgba(255,255,255,0.25);
     line-height: 1.7;
 }
 
-/* ────────────────────────────────────────
-   Status Bar — fixed bottom, Vercel-style
-──────────────────────────────────────── */
+/* Footer legal / meta strip */
+.footer-legal {
+    padding: 18px 0;
+    border-bottom: 1px solid #1a1a1a;
+}
+
+.footer-legal-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px 28px;
+}
+
+.footer-meta-row {
+    display: flex;
+    gap: 8px;
+    font-size: 12px;
+    white-space: nowrap;
+}
+
+.footer-meta-label {
+    color: rgba(255,255,255,0.3);
+}
+
+.footer-meta-value {
+    color: rgba(255,255,255,0.55);
+}
+
+/* ── Status Bar — NOT fixed, just last element ── */
 .status-bar {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 36px;
     background: #0a0a0a;
     border-top: 1px solid #1e1e1e;
-    z-index: 200;
 }
 
 .status-inner {
-    max-width: 900px;
+    max-width: 880px;
     margin: 0 auto;
     padding: 0 28px;
-    height: 100%;
+    height: 36px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -480,8 +378,7 @@ a { color: inherit; text-decoration: none; }
     align-items: center;
     gap: 7px;
     font-size: 12px;
-    color: rgba(255,255,255,0.65);
-    font-weight: 400;
+    color: rgba(255,255,255,0.55);
 }
 
 .status-dot {
@@ -501,47 +398,31 @@ a { color: inherit; text-decoration: none; }
 
 .status-link {
     font-size: 11px;
-    color: rgba(255,255,255,0.3);
+    color: rgba(255,255,255,0.28);
     transition: color 0.15s;
 }
 
-.status-link:hover { color: rgba(255,255,255,0.65); }
+.status-link:hover { color: rgba(255,255,255,0.6); }
 
-/* ────────────────────────────────────────
-   Responsive
-──────────────────────────────────────── */
-@media (max-width: 700px) {
-    .about-body {
-        flex-direction: column;
-        gap: 32px;
-    }
-
-    .about-logo-wrap { display: none; }
-
-    .nav-links {
-        gap: 12px;
-    }
-
-    .nav-link:not(.nav-join) {
-        display: none;
-    }
-
+/* ── Responsive ── */
+@media (max-width: 680px) {
     .committee-year-block {
         flex-direction: column;
         gap: 8px;
     }
 
-    .footer-row {
+    .footer-top {
         flex-direction: column;
         align-items: flex-start;
     }
-
-    .meta-row { flex-direction: column; gap: 1px; }
-    .meta-label { min-width: 0; }
 
     .pdf-frame { height: 420px; }
 
     .section { padding: 40px 0; }
 
-    .about-section { padding: 48px 0 40px; }
+    .hero-section { padding: 56px 0 52px; }
+
+    .partners-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }

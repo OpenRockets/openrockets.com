@@ -4,87 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OpenRockets Foundation — Open Source, Education &amp; Innovation</title>
-    <meta name="description" content="OpenRockets Foundation is a 501(c)(3) registered nonprofit — an umbrella for student-led open source, education, and innovation projects worldwide.">
+    <meta name="description" content="OpenRockets Foundation is a 501(c)(3) registered nonprofit in the United States of America, supporting student-led open source and innovation projects.">
     <meta name="author" content="OpenRockets Foundation">
-    <meta property="og:title" content="OpenRockets Foundation">
-    <meta property="og:description" content="A 501(c)(3) nonprofit umbrella for open source, education, and innovation.">
     <link rel="icon" type="image/png" href="i/assets/static/openthread_logo_bash-trans-removebg-preview (1).png">
     <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
 
     <!-- ─────────────────────────────────────────
-         Navigation — black bar, logo only
+         Hero — logo + pitch + CTA only
+         (logo is white; filter:invert(1) makes it visible on white bg)
     ───────────────────────────────────────── -->
-    <nav class="navbar">
-        <div class="nav-inner">
-            <a href="/" class="nav-brand" aria-label="OpenRockets Foundation">
-                <!-- Logo is white; renders perfectly on the black nav — no filter needed -->
-                <img src="v/openrockets.png" alt="OpenRockets Foundation" class="nav-logo">
-            </a>
-            <div class="nav-links">
-                <a href="#about"      class="nav-link">About</a>
-                <a href="#nonprofits" class="nav-link">Nonprofits</a>
-                <a href="#pioneers"   class="nav-link">Pioneers</a>
-                <a href="#committee"  class="nav-link">Committee</a>
-                <a href="join.html"   class="nav-link nav-join">Join Us</a>
-            </div>
-        </div>
-    </nav>
-
-    <!-- ─────────────────────────────────────────
-         About / Hero
-    ───────────────────────────────────────── -->
-    <section id="about" class="about-section">
+    <section id="about" class="hero-section">
         <div class="container">
-            <div class="about-body">
-
-                <div class="about-text">
-                    <h1 class="org-name">OpenRockets Foundation</h1>
-                    <p class="org-tagline">
-                        An umbrella nonprofit powering student-led initiatives in open source software,
-                        education, and digital innovation — operating globally from Colombo, Sri Lanka.
-                    </p>
-
-                    <div class="org-meta">
-                        <div class="meta-row">
-                            <span class="meta-label">Legal Status</span>
-                            <span class="meta-value">501(c)(3) Registered Nonprofit &nbsp;·&nbsp; United States of America</span>
-                        </div>
-                        <div class="meta-row">
-                            <span class="meta-label">Fiscal Sponsor</span>
-                            <span class="meta-value">The Hack Foundation</span>
-                        </div>
-                        <div class="meta-row">
-                            <span class="meta-label">Network</span>
-                            <span class="meta-value">National Network of Fiscal Sponsors</span>
-                        </div>
-                        <div class="meta-row">
-                            <span class="meta-label">Partner</span>
-                            <span class="meta-value">Dialog Enterprise, Sri Lanka</span>
-                        </div>
-                    </div>
-
-                    <a href="join.html" class="btn-primary">Apply to Join &rarr;</a>
-                </div>
-
-                <div class="about-logo-wrap">
-                    <!-- White logo on white background — inverted via CSS to appear dark -->
-                    <img src="v/openrockets.png" alt="OpenRockets" class="about-logo">
-                </div>
-
-            </div>
+            <img src="v/openrockets.png" alt="OpenRockets Foundation" class="hero-logo">
+            <p class="hero-pitch">
+                Running a nonprofit, a school club, a small initiative, or a growing community
+                project, without a large team behind you?
+            </p>
+            <p class="hero-sub">You&rsquo;re in the right place.</p>
+            <a href="join.html" class="btn-hero">Join Us &rarr;</a>
         </div>
     </section>
 
     <!-- ─────────────────────────────────────────
-         Our Nonprofits
+         Nonprofits
     ───────────────────────────────────────── -->
     <section id="nonprofits" class="section">
         <div class="container">
             <div class="section-header">
-                <h2>Our Nonprofits</h2>
-                <p>Independent projects operating under the OpenRockets Foundation umbrella</p>
+                <h2>Nonprofits</h2>
+                <p>Independent projects operating under the OpenRockets Foundation</p>
             </div>
 
             <div class="nonprofits-list">
@@ -128,16 +78,6 @@
                     <span class="np-arrow">&rarr;</span>
                 </a>
 
-                <a href="https://github.com/openrockets-india" target="_blank" rel="noopener" class="np-item">
-                    <img src="https://github.com/openrockets-india.png"
-                         alt="OpenRockets India" class="np-logo">
-                    <div class="np-info">
-                        <span class="np-name">OpenRockets India</span>
-                        <span class="np-url">github.com/openrockets-india</span>
-                    </div>
-                    <span class="np-arrow">&rarr;</span>
-                </a>
-
             </div>
         </div>
     </section>
@@ -152,17 +92,27 @@
                 <p>Organizations we proudly work alongside</p>
             </div>
 
-            <div class="partners-row">
-                <a href="https://thebulleteen.com" target="_blank" rel="noopener" class="partner-item">
+            <div class="partners-grid">
+
+                <a href="https://thebulleteen.com" target="_blank" rel="noopener" class="partner-card">
                     <img src="https://thebulleteen.com/wp-content/uploads/2024/09/cropped-cropped-Logo-1-removebg-preview-300x214.png"
                          alt="TheBulleTeen" class="partner-logo">
                     <span>TheBulleTeen</span>
                 </a>
-                <a href="https://hackclub.com" target="_blank" rel="noopener" class="partner-item">
+
+                <a href="https://hackclub.com" target="_blank" rel="noopener" class="partner-card">
                     <img src="https://assets.hackclub.com/flag-orpheus-left.png"
                          alt="Hack Club" class="partner-logo">
                     <span>Hack Club</span>
                 </a>
+
+                <a href="https://enterprise.dialog.lk" target="_blank" rel="noopener" class="partner-card">
+                    <img src="https://media.licdn.com/dms/image/v2/D560BAQFJ7bASd64Fyw/company-logo_200_200/company-logo_200_200/0/1667634706270/dialog_enterprise_logo?e=2147483647&v=beta&t=raB4aBZ6A842mr5lN3Gtp2tI8Y4U1EH_IIX8TEYKN90"
+                         alt="Dialog Enterprise" class="partner-logo">
+                    <span>Dialog Enterprise</span>
+                    <span class="partner-tag">Sri Lanka</span>
+                </a>
+
             </div>
         </div>
     </section>
@@ -174,7 +124,7 @@
         <div class="container">
             <div class="section-header">
                 <h2>The Pioneers</h2>
-                <p>Read the founding document — the story of how this all started</p>
+                <p>Our founding document &mdash; the story of how this started</p>
             </div>
             <div class="pdf-wrap">
                 <iframe
@@ -182,38 +132,6 @@
                     title="OpenRockets — The Pioneers"
                     class="pdf-frame">
                 </iframe>
-            </div>
-        </div>
-    </section>
-
-    <!-- ─────────────────────────────────────────
-         Founding Story
-    ───────────────────────────────────────── -->
-    <section id="story" class="section story-section">
-        <div class="container">
-            <div class="section-header">
-                <h2>Founding Story</h2>
-            </div>
-            <div class="story-body">
-                <p class="story-pull">
-                    We believe the next generation of the internet will be built by teenagers.
-                    We&rsquo;re giving them the scaffolding to do it.
-                </p>
-                <p>
-                    OpenRockets was founded in 2024 by Neksha DeSilva as a space where young builders,
-                    writers, and thinkers could contribute to real-world open source projects &mdash;
-                    without gatekeeping, without bureaucracy, and without waiting to be &ldquo;old enough.&rdquo;
-                </p>
-                <p>
-                    What started as a single initiative quickly expanded into a network of nonprofits,
-                    each tackling a different corner of the open internet: a magazine, a social network,
-                    a developer community, and more.
-                </p>
-                <p>
-                    Operating from Colombo, Sri Lanka, and recognized in the United States as a
-                    501(c)(3) organization, OpenRockets Foundation serves as the legal and operational
-                    home for these projects &mdash; providing infrastructure, fiscal access, and community.
-                </p>
             </div>
         </div>
     </section>
@@ -297,8 +215,31 @@
     ───────────────────────────────────────── -->
     <footer class="footer">
         <div class="container">
-            <div class="footer-row">
 
+            <!-- Legal / meta strip -->
+            <div class="footer-legal">
+                <div class="footer-legal-grid">
+                    <div class="footer-meta-row">
+                        <span class="footer-meta-label">Legal Status</span>
+                        <span class="footer-meta-value">501(c)(3) Registered Nonprofit &middot; United States of America</span>
+                    </div>
+                    <div class="footer-meta-row">
+                        <span class="footer-meta-label">Fiscal Sponsor</span>
+                        <span class="footer-meta-value">The Hack Foundation</span>
+                    </div>
+                    <div class="footer-meta-row">
+                        <span class="footer-meta-label">Network</span>
+                        <span class="footer-meta-value">National Network of Fiscal Sponsors</span>
+                    </div>
+                    <div class="footer-meta-row">
+                        <span class="footer-meta-label">Local Partner</span>
+                        <span class="footer-meta-value">Dialog Enterprise, Sri Lanka</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Links + copyright -->
+            <div class="footer-top">
                 <div class="footer-links">
                     <a href="https://github.com/OpenRockets" target="_blank" rel="noopener" class="footer-link">
                         <svg class="footer-link-icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
@@ -331,17 +272,15 @@
                 </div>
 
                 <p class="footer-copy">
-                    &copy; 2025 OpenRockets Foundation &nbsp;&middot;&nbsp;
-                    501(c)(3) Registered Nonprofit, United States of America<br>
-                    Operated in Colombo, Sri Lanka
+                    &copy; 2025 OpenRockets Foundation &middot; Colombo, Sri Lanka
                 </p>
-
             </div>
+
         </div>
     </footer>
 
     <!-- ─────────────────────────────────────────
-         Status Bar — fixed bottom, Vercel-style
+         Status Bar — sits at bottom of page (not fixed/floating)
     ───────────────────────────────────────── -->
     <div class="status-bar" role="status" aria-live="polite">
         <div class="status-inner">

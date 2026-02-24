@@ -42,14 +42,32 @@ export async function sendEmailNotification(formData) {
             timeZoneName: 'short'
         });
 
+        // Social profiles
+        const profilesFormatted = Array.isArray(formData.social_profiles) && formData.social_profiles.length
+            ? formData.social_profiles.join('\n')
+            : 'None provided';
+
+        // Nonprofit info
+        const nonprofitBlock = formData.has_nonprofit === 'yes'
+            ? [
+                `Name: ${formData.np_name || '—'}`,
+                `Location: ${formData.np_location || '—'}`,
+                `Registered: ${formData.np_registered || '—'}`,
+                `Size: ${formData.np_size || '—'}`,
+                `Description: ${formData.np_description || '—'}`
+              ].join('\n')
+            : 'Not running a nonprofit';
+
         // Prepare template parameters for EmailJS
         const templateParams = {
-            name: formData.name || 'Unknown',
-            email: formData.email || 'No email provided',
-            github_url: formData.githubUrl || 'No GitHub URL provided',
-            skills: skillsFormatted,
-            reason: formData.reason || 'No reason provided',
-            time: submissionTime
+            name:             formData.name || 'Unknown',
+            email:            formData.email || 'No email provided',
+            social_profiles:  profilesFormatted,
+            skills:           skillsFormatted,
+            has_nonprofit:    formData.has_nonprofit || 'no',
+            nonprofit_info:   nonprofitBlock,
+            program_signup:   formData.program_signup === 'yes' ? 'Yes — applied' : 'No',
+            time:             submissionTime
         };
 
         console.log('Sending email notification with params:', templateParams);
@@ -90,9 +108,11 @@ export async function testEmailConnection() {
         const testParams = {
             name: 'Test User',
             email: 'test@example.com',
-            github_url: 'https://github.com/test',
+            social_profiles: 'https://github.com/test',
             skills: 'JavaScript, Testing',
-            reason: 'This is a test submission',
+            has_nonprofit: 'no',
+            nonprofit_info: 'Not running a nonprofit',
+            program_signup: 'No',
             time: new Date().toLocaleString()
         };
 

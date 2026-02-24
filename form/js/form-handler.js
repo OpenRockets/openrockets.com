@@ -79,17 +79,6 @@ class FormHandler {
                 required: true,
                 pattern: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
                 errorMessage: 'Please enter a valid email address'
-            },
-            githubUrl: {
-                required: true,
-                pattern: /^https:\/\/github\.com\/[a-zA-Z0-9\-_]+\/?$/,
-                errorMessage: 'Please enter a valid GitHub profile URL (https://github.com/username)'
-            },
-            reason: {
-                required: true,
-                minLength: 50,
-                maxLength: 1000,
-                errorMessage: 'Please provide a detailed reason (at least 50 characters)'
             }
         };
     }
@@ -199,12 +188,30 @@ class FormHandler {
             data[name] = value.trim();
         }
 
-        // Add skills array from tag input
+        // Collect skills from tag input
         if (window.tagInputInstance) {
             data.skills = window.tagInputInstance.getTagsArray();
         } else {
             data.skills = [];
         }
+
+        // Collect social profiles (multiple URL inputs)
+        const profileInputs = document.querySelectorAll('.social-profile-input');
+        data.social_profiles = Array.from(profileInputs)
+            .map(i => i.value.trim())
+            .filter(v => v.length > 0);
+
+        // Nonprofit fields
+        data.has_nonprofit = (document.querySelector('input[name="has_nonprofit"]:checked') || {}).value || 'no';
+        data.np_name        = (document.getElementById('np_name')        || {}).value || '';
+        data.np_location    = (document.getElementById('np_location')    || {}).value || '';
+        data.np_registered  = (document.getElementById('np_registered')  || {}).value || '';
+        data.np_size        = (document.getElementById('np_size')        || {}).value || '';
+        data.np_description = (document.getElementById('np_description') || {}).value || '';
+
+        // Part Nonprofits Program opt-in
+        const programCheckbox = document.getElementById('program_signup');
+        data.program_signup = programCheckbox && programCheckbox.checked ? 'yes' : 'no';
 
         return data;
     }

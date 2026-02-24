@@ -3,168 +3,505 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Join OpenRockets Foundation - Developer Community</title>
+    <title>Join — OpenRockets Foundation</title>
     <link rel="icon" type="image/png" href="i/assets/static/openthread_logo_bash-trans-removebg-preview (1).png">
     <link rel="stylesheet" href="./form/css/styles.css">
-    <link rel="stylesheet" href="styles/professional.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* ── Page-level overrides ── */
+        body { font-family: 'Inter', sans-serif; }
+
+        .container { max-width: 780px; }
+
+        .header {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            padding: 32px 0 24px;
+            margin-bottom: 0;
+            border-bottom: 1px solid #e4e4e4;
+        }
+
+        .header-logo {
+            height: 36px;
+            width: auto;
+        }
+
+        .back-link {
+            font-size: 13px;
+            color: #666;
+            text-decoration: none;
+            margin-left: auto;
+        }
+        .back-link:hover { color: #000; text-decoration: underline; }
+
+        .page-intro {
+            padding: 24px 0 28px;
+            border-bottom: 1px solid #e4e4e4;
+            margin-bottom: 32px;
+        }
+        .page-intro h1 {
+            font-size: 22px;
+            font-weight: 700;
+            letter-spacing: -0.3px;
+            margin-bottom: 6px;
+        }
+        .page-intro p {
+            font-size: 14px;
+            color: #555;
+            line-height: 1.65;
+        }
+
+        /* ── Form section dividers ── */
+        .form-section {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            padding-bottom: 28px;
+            margin-bottom: 28px;
+            border-bottom: 1px solid #e4e4e4;
+        }
+        .form-section:last-of-type {
+            border-bottom: none;
+            margin-bottom: 0;
+        }
+        .form-section-title {
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            color: #999;
+            margin-bottom: 4px;
+        }
+
+        /* ── Social profiles ── */
+        .social-profiles-list {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .social-profile-row {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        }
+        .social-profile-row input {
+            flex: 1;
+        }
+        .remove-profile-btn {
+            flex-shrink: 0;
+            width: 34px;
+            height: 34px;
+            border: 1px solid #ddd;
+            background: #fff;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 17px;
+            color: #999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: border-color 0.15s, color 0.15s;
+        }
+        .remove-profile-btn:hover { border-color: #000; color: #000; }
+
+        .add-profile-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 13px;
+            font-weight: 500;
+            color: #444;
+            background: #f5f5f5;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            padding: 7px 14px;
+            cursor: pointer;
+            transition: border-color 0.15s, color 0.15s;
+            margin-top: 4px;
+        }
+        .add-profile-btn:hover { border-color: #000; color: #000; }
+
+        /* ── Nonprofit toggle ── */
+        .toggle-group {
+            display: flex;
+            gap: 10px;
+        }
+        .toggle-option {
+            display: none;
+        }
+        .toggle-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 18px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 13px;
+            font-weight: 500;
+            cursor: pointer;
+            color: #444;
+            transition: border-color 0.15s, background 0.15s, color 0.15s;
+        }
+        .toggle-option:checked + .toggle-label {
+            border-color: #000;
+            background: #000;
+            color: #fff;
+        }
+
+        /* ── Conditional nonprofit fields ── */
+        #nonprofit-fields {
+            display: none;
+            flex-direction: column;
+            gap: 20px;
+            padding: 20px;
+            background: #f9f9f9;
+            border: 1px solid #e4e4e4;
+            border-radius: 8px;
+        }
+        #nonprofit-fields.visible {
+            display: flex;
+        }
+
+        /* ── Select dropdown ── */
+        .form-select {
+            width: 100%;
+            padding: 12px 14px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-family: 'Inter', sans-serif;
+            font-size: 14px;
+            background: #fff;
+            color: #000;
+            appearance: none;
+            -webkit-appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%23666' d='M6 8L0 0h12z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 14px center;
+            cursor: pointer;
+            transition: border-color 0.15s;
+        }
+        .form-select:focus {
+            outline: none;
+            border-color: #000;
+            box-shadow: 0 0 0 3px rgba(0,0,0,0.08);
+        }
+
+        /* ── Program opt-in ── */
+        .program-box {
+            border: 1px solid #e4e4e4;
+            border-radius: 8px;
+            padding: 20px;
+        }
+        .program-box h3 {
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 6px;
+        }
+        .program-box p {
+            font-size: 13px;
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 14px;
+        }
+        .checkbox-row {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+        .checkbox-row input[type="checkbox"] {
+            width: 16px;
+            height: 16px;
+            margin-top: 2px;
+            cursor: pointer;
+            flex-shrink: 0;
+            accent-color: #000;
+        }
+        .checkbox-row label {
+            font-size: 13px;
+            font-weight: 500;
+            cursor: pointer;
+            line-height: 1.5;
+        }
+
+        /* ── Submit button ── */
+        .submit-btn {
+            border-radius: 8px;
+            font-size: 15px;
+            min-height: 50px;
+            width: 100%;
+        }
+
+        /* ── Form input font size ── */
+        .form-input, .form-textarea { font-size: 14px; }
+
+        /* ── Form container borderless inner ── */
+        .form-container {
+            border: none;
+            box-shadow: none;
+            padding: 0;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
+
         <!-- Header -->
         <header class="header">
-            <img src="./v/openrockets-w.png" alt="OpenRockets Foundation" width="30%">
-            <p class="subtitle">Join the OpenRockets Foundation Community</p>
+            <a href="/">
+                <img src="./v/openrockets.png" alt="OpenRockets Foundation" class="header-logo" style="filter:invert(1);">
+            </a>
+            <a href="/" class="back-link">&larr; Back to main site</a>
         </header>
 
-        <div class="benefits-note">
-            <p>By joining OpenRockets Foundation, you will gain access to collaborative development opportunities, the <a href="https://nekshadesilva.github.io/openthread/" target="_blank" class="openthreads-link">OpenThreads</a> code-sharing platform, and full access to our <a href="https://github.com/OpenRockets" target="_blank" class="github-link">GitHub organization</a>.</p>
+        <!-- Page intro -->
+        <div class="page-intro">
+            <h1>Apply to Join</h1>
+            <p>
+                OpenRockets Foundation supports nonprofits, school clubs, and community-led projects
+                with infrastructure, fiscal access, and a network of builders.
+                Fill in the details below and we&rsquo;ll get back to you.
+            </p>
         </div>
 
-        <!-- Form Container -->
+        <!-- Form -->
         <main class="form-container">
             <form id="openrockets-form" class="application-form">
-                <!-- Name Field -->
-                <div class="form-group">
-                    <label for="name" class="form-label">Full Name *</label>
-                    <input 
-                        type="text" 
-                        id="name" 
-                        name="name" 
-                        class="form-input" 
-                        required 
-                        placeholder="Enter your full name"
-                    >
-                    <div class="error-message" id="name-error"></div>
-                </div>
 
-                <!-- Email Field -->
-                <div class="form-group">
-                    <label for="email" class="form-label">Email Address *</label>
-                    <input 
-                        type="email" 
-                        id="email" 
-                        name="email" 
-                        class="form-input" 
-                        required 
-                        placeholder="your.email@example.com"
-                    >
-                    <div class="error-message" id="email-error"></div>
-                </div>
+                <!-- ── 1. Personal Info ── -->
+                <div class="form-section">
+                    <div class="form-section-title">Personal Info</div>
 
-                <!-- GitHub URL Field -->
-                <div class="form-group">
-                    <label for="githubUrl" class="form-label">GitHub Profile *</label>
-                    <input 
-                        type="url" 
-                        id="githubUrl" 
-                        name="githubUrl" 
-                        class="form-input" 
-                        required 
-                        placeholder="https://github.com/yourusername"
-                        pattern="https://github\.com/.*"
-                    >
-                    <div class="error-message" id="github-error"></div>
-                </div>
-
-                <!-- Skills Tag Input -->
-                <div class="form-group">
-                    <label for="skills" class="form-label">Skills & Technologies *</label>
-                    <div class="tag-input-container">
-                        <div class="tags-display" id="tags-display"></div>
-                        <input 
-                            type="text" 
-                            id="skills-input" 
-                            class="tag-input" 
-                            placeholder="Type a skill and press Enter..."
-                        >
+                    <div class="form-group">
+                        <label for="name" class="form-label">Full Name *</label>
+                        <input type="text" id="name" name="name" class="form-input" required
+                               placeholder="Your full name">
+                        <div class="error-message" id="name-error"></div>
                     </div>
-                    <div class="skills-suggestions">
-                        <span class="suggestion-label">Popular skills:</span>
-                        <button type="button" class="skill-suggestion" data-skill="JavaScript">JavaScript</button>
-                        <button type="button" class="skill-suggestion" data-skill="Python">Python</button>
-                        <button type="button" class="skill-suggestion" data-skill="React">React</button>
-                        <button type="button" class="skill-suggestion" data-skill="Node.js">Node.js</button>
-                        <button type="button" class="skill-suggestion" data-skill="TypeScript">TypeScript</button>
-                        <button type="button" class="skill-suggestion" data-skill="Firebase">Firebase</button>
+
+                    <div class="form-group">
+                        <label for="email" class="form-label">Email Address *</label>
+                        <input type="email" id="email" name="email" class="form-input" required
+                               placeholder="you@example.com">
+                        <div class="error-message" id="email-error"></div>
                     </div>
-                    <div class="error-message" id="skills-error"></div>
                 </div>
 
-                <!-- Reason Field -->
-                <div class="form-group">
-                    <label for="reason" class="form-label">Why do you want to join OpenRockets Foundation? *</label>
-                    <textarea 
-                        id="reason" 
-                        name="reason" 
-                        class="form-textarea" 
-                        required 
-                        placeholder="Describe your interest in open source development, your development experience, and how you plan to contribute to the OpenRockets community..."
-                        rows="5"
-                    ></textarea>
-                    <div class="error-message" id="reason-error"></div>
+                <!-- ── 2. Social Profiles ── -->
+                <div class="form-section">
+                    <div class="form-section-title">Social &amp; Online Profiles</div>
+                    <div class="form-group">
+                        <label class="form-label">Profile URLs <span style="font-weight:400;color:#888;">(GitHub, LinkedIn, X, personal site…)</span></label>
+                        <div class="social-profiles-list" id="social-profiles-list">
+                            <div class="social-profile-row">
+                                <input type="url" class="form-input social-profile-input"
+                                       placeholder="https://github.com/yourhandle">
+                                <!-- First row has no remove button -->
+                            </div>
+                        </div>
+                        <button type="button" class="add-profile-btn" id="add-profile-btn">
+                            + Add another profile
+                        </button>
+                    </div>
                 </div>
 
-                <!-- Submit Button -->
+                <!-- ── 3. Skills ── -->
+                <div class="form-section">
+                    <div class="form-section-title">Skills</div>
+                    <div class="form-group">
+                        <label for="skills-input" class="form-label">What skills do you bring? *</label>
+                        <div class="tag-input-container">
+                            <div class="tags-display" id="tags-display"></div>
+                            <input type="text" id="skills-input" class="tag-input"
+                                   placeholder="Type a skill and press Enter…">
+                        </div>
+                        <div class="skills-suggestions">
+                            <span class="suggestion-label">Suggestions:</span>
+                            <button type="button" class="skill-suggestion" data-skill="JavaScript">JavaScript</button>
+                            <button type="button" class="skill-suggestion" data-skill="Python">Python</button>
+                            <button type="button" class="skill-suggestion" data-skill="React">React</button>
+                            <button type="button" class="skill-suggestion" data-skill="Node.js">Node.js</button>
+                            <button type="button" class="skill-suggestion" data-skill="TypeScript">TypeScript</button>
+                            <button type="button" class="skill-suggestion" data-skill="Design">Design</button>
+                            <button type="button" class="skill-suggestion" data-skill="Writing">Writing</button>
+                            <button type="button" class="skill-suggestion" data-skill="Marketing">Marketing</button>
+                        </div>
+                        <div class="error-message" id="skills-error"></div>
+                    </div>
+                </div>
+
+                <!-- ── 4. Nonprofit ── -->
+                <div class="form-section">
+                    <div class="form-section-title">Nonprofit</div>
+
+                    <div class="form-group">
+                        <label class="form-label">Are you currently running a nonprofit, school club, or community project?</label>
+                        <div class="toggle-group">
+                            <input type="radio" name="has_nonprofit" id="np-yes" value="yes" class="toggle-option">
+                            <label for="np-yes" class="toggle-label">Yes</label>
+
+                            <input type="radio" name="has_nonprofit" id="np-no" value="no" class="toggle-option" checked>
+                            <label for="np-no" class="toggle-label">No</label>
+                        </div>
+                    </div>
+
+                    <!-- Conditional fields — shown when Yes -->
+                    <div id="nonprofit-fields">
+                        <div class="form-group">
+                            <label for="np_name" class="form-label">Name of your nonprofit / project</label>
+                            <input type="text" id="np_name" name="np_name" class="form-input"
+                                   placeholder="e.g. CodeForKids Colombo">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="np_location" class="form-label">Where is it based?</label>
+                            <input type="text" id="np_location" name="np_location" class="form-input"
+                                   placeholder="City, Country">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="np_registered" class="form-label">Is it legally registered?</label>
+                            <select id="np_registered" name="np_registered" class="form-select">
+                                <option value="">— Select —</option>
+                                <option value="yes">Yes, registered</option>
+                                <option value="no">Not yet registered</option>
+                                <option value="in_progress">Registration in progress</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="np_size" class="form-label">Approximate member / team size</label>
+                            <select id="np_size" name="np_size" class="form-select">
+                                <option value="">— Select —</option>
+                                <option value="1-5">1 – 5 people</option>
+                                <option value="6-20">6 – 20 people</option>
+                                <option value="21-50">21 – 50 people</option>
+                                <option value="51-200">51 – 200 people</option>
+                                <option value="200+">200+ people</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="np_description" class="form-label">Briefly describe what your organization does</label>
+                            <textarea id="np_description" name="np_description" class="form-textarea" rows="3"
+                                      placeholder="What does your project do, who does it serve, and what's the goal?"></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ── 5. Part Nonprofits Program ── -->
+                <div class="form-section">
+                    <div class="form-section-title">OpenRockets Part Nonprofits Program</div>
+
+                    <div class="program-box">
+                        <h3>Would you like to join the OpenRockets Part Nonprofits Program?</h3>
+                        <p>
+                            The Part Nonprofits Program gives your organization access to OpenRockets Foundation&rsquo;s
+                            fiscal sponsorship network, shared infrastructure, legal backing, and a community of
+                            student-led nonprofits from across the world. Acceptance is reviewed individually.
+                        </p>
+                        <div class="checkbox-row">
+                            <input type="checkbox" id="program_signup" name="program_signup" value="yes">
+                            <label for="program_signup">
+                                Yes, I&rsquo;d like to apply for the Part Nonprofits Program and learn more about
+                                what OpenRockets Foundation can offer my organization.
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ── Submit ── -->
                 <button type="submit" class="submit-btn" id="submit-btn">
                     <span class="btn-text">Submit Application</span>
                     <div class="loading-spinner" id="loading-spinner"></div>
                 </button>
+
             </form>
         </main>
 
-        <!-- Success Message -->
+        <!-- Success overlay -->
         <div class="success-overlay" id="success-overlay">
             <div class="success-modal">
                 <div class="success-icon">✓</div>
-                <h2 class="success-title">Application Submitted Successfully</h2>
+                <h2 class="success-title">Application Received</h2>
                 <p class="success-message">
-                    Thank you for your interest in joining OpenRockets Foundation. Your application has been received and will be reviewed by our team. You will receive access to our GitHub organization and community resources upon approval.
+                    Thank you for applying. We&rsquo;ve received your submission and will review it shortly.
+                    Keep an eye on your inbox — we&rsquo;ll reach out via email.
                 </p>
                 <div class="action-buttons">
                     <a href="https://github.com/OpenRockets" target="_blank" class="action-btn github-btn">
-                        <span>Follow GitHub Organization</span>
-                    </a>
-                    <a href="#" target="_blank" class="action-btn review-btn" id="review-btn">
-                        <span>Leave a Review</span>
+                        Follow us on GitHub
                     </a>
                 </div>
-                <button type="button" class="secondary-btn" id="submit-another">Submit Another Application</button>
+                <button type="button" class="secondary-btn" id="submit-another">Submit another application</button>
             </div>
         </div>
 
         <!-- Footer -->
         <footer class="footer">
             <div class="footer-content">
-                <p>&copy; 2025 OpenRockets Open-source Software Foundation. Headquartered in Sri Lanka. <br>All rghts reserved.</p>
+                <p>&copy; 2025 OpenRockets Foundation &middot; Colombo, Sri Lanka</p>
                 <div class="footer-links">
-                    <a href="https://nekshadesilva.github.io/openthread/" target="_blank" class="footer-link">
-                        <img src="https://nekshadesilva.github.io/openthread/assets/openthread_logo_bash-trans.png" alt="OpenThreads" class="footer-logo">
-                        <span>OpenThreads</span>
-                    </a>
                     <a href="https://github.com/OpenRockets" target="_blank" class="footer-link">
                         <svg class="footer-logo github-logo" viewBox="0 0 16 16" fill="currentColor">
                             <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
                         </svg>
-                        <span>GitHub</span>
+                        GitHub
                     </a>
                     <a href="https://x.com/OpenRockets" target="_blank" class="footer-link">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter-x" viewBox="0 0 16 16">
-  <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"/>
-</svg>
-                        <span>Tweets</span>
+                        <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                            <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"/>
+                        </svg>
+                        X (Twitter)
                     </a>
                 </div>
             </div>
         </footer>
     </div>
 
-    <!-- EmailJS Script -->
+    <!-- EmailJS -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-    
-    <!-- Firebase Scripts -->
+
+    <!-- Nonprofit conditional section + social profiles (plain JS, not module) -->
+    <script>
+        // Nonprofit section toggle
+        document.querySelectorAll('input[name="has_nonprofit"]').forEach(function(radio) {
+            radio.addEventListener('change', function() {
+                var npFields = document.getElementById('nonprofit-fields');
+                if (this.value === 'yes') {
+                    npFields.classList.add('visible');
+                } else {
+                    npFields.classList.remove('visible');
+                }
+            });
+        });
+
+        // Social profiles – add/remove rows
+        var profileList = document.getElementById('social-profiles-list');
+        var addBtn = document.getElementById('add-profile-btn');
+
+        addBtn.addEventListener('click', function() {
+            var rows = profileList.querySelectorAll('.social-profile-row');
+            if (rows.length >= 8) return; // cap at 8 profiles
+
+            var row = document.createElement('div');
+            row.className = 'social-profile-row';
+            row.innerHTML =
+                '<input type="url" class="form-input social-profile-input" placeholder="https://...">' +
+                '<button type="button" class="remove-profile-btn" title="Remove">&times;</button>';
+
+            row.querySelector('.remove-profile-btn').addEventListener('click', function() {
+                row.remove();
+            });
+
+            profileList.appendChild(row);
+            row.querySelector('input').focus();
+        });
+    </script>
+
+    <!-- Modules -->
     <script type="module" src="./form/js/firebase-config.js"></script>
     <script type="module" src="./form/js/emailjs-config.js"></script>
     <script type="module" src="./form/js/tag-input.js"></script>
